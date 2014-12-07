@@ -1,1 +1,46 @@
 Welcome to the Index!
+
+
+<p>How long will you be using the metro?</p>
+<form action='/calculate' method='post'>
+
+First: <input type='date' name='start_date' autofocus/>
+
+
+
+Last: <input type='date' name='end_date' />
+<br></br>
+
+<p>How many rides per day?</p>
+<p>
+Weekdays: <select name='weekday_rides' >
+<option value='0'>0</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+<option value='6'>6</option>
+<option value='7'>7</option>
+<option value='8'>8</option>
+<option value='9'>9</option>
+</select></p>
+
+<p>Weekends: <select name='weekend_rides' >
+<option value='0'>0</option>
+<option value='1'>1</option>
+<option value='2'>2</option>
+<option value='3'>3</option>
+<option value='4'>4</option>
+<option value='5'>5</option>
+<option value='6'>6</option>
+<option value='7'>7</option>
+<option value='8'>8</option>
+<option value='9'>9</option>
+</select></p>
+
+<br></br>
+<input type='submit' />
+
+
+</form>

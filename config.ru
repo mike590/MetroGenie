@@ -6,4 +6,6 @@ Dir.glob('./{models,controllers}/*.rb').each do |file|
   puts 'required #{file}'
 end
 
-map('/'){ run WelcomeController}
+require 'date'
+
+map('/'){ run WelcomeController }
