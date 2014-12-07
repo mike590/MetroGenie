@@ -1,9 +1,9 @@
 require 'bundler'
 Bundler.require(:default)
 
-Dir.glob('./models/*.rb').each do |file|
+Dir.glob('./{models,controllers}/*.rb').each do |file|
   require file
   puts 'required #{file}'
 end
 
-map('/example_route'){ run ExampleController}
+map('/'){ run WelcomeController}
