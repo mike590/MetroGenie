@@ -4,6 +4,10 @@ Welcome to the Index!
 <p>How long will you be using the metro?</p>
 <form id='user-questions' action='/calculate' method='post'>
 
+<button id='have-card'>Have Card</button>
+<button id='need-card'>Need New Card</button>
+<!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
+
 First: <input id='start-date' type='date' name='start_date' autofocus/>
 
 
