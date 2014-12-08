@@ -4,13 +4,14 @@ class WelcomeController < ApplicationController
     erb :index
   end
 
-  post '/calculate' do
-  
-    
-      date_Array = (Date.parse(params[:start_date]) .. Date.parse(params[:end_date])).map do |date|
-        date.dayname
-      end
-    binding.pry
+  get '/calculate' do
+    date_array = (Date.parse(params[:start_date]) .. Date.parse(params[:end_date])).map do |date|
+      date.dayname
+    end
+
+    content_type :json
+    date_array.to_json
+
   end
 
 end
