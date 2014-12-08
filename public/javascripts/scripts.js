@@ -13,7 +13,34 @@ $(function(){
   $submit = $('#submit')
   $('#submit').click(function(e) {
     e.preventDefault();
-    submitData();
+    var proceed = true
+    if ($startDate.val() === ""){
+      // generate error
+      proceed = false
+      console.log("This error is for start date value")
+    }
+
+    if ($endDate.val() === ""){
+      // generate error
+      proceed = false
+      console.log("This error is for end date value")
+    }
+
+    if ($weekdayRides.val() === "Choose"){
+      // generate error
+      proceed = false
+      console.log("This error is for weekday rides value")
+    }
+
+    if ($weekendRides.val() === "Choose"){
+      // generate error
+      proceed = false
+      console.log("This error is for weekend rides value")
+    }
+
+    if (proceed){
+      submitData();
+    }
   });
 });
   
