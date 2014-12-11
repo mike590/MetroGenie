@@ -22,8 +22,8 @@ class NewYork
       else
         @weekly_cost += @weekday_rides*2.5
       end
-      @weekly_cost = @weekly_cost/1.05
     end
+    @weekly_cost = @weekly_cost/1.05
 
     @final_week.each do |day|
       if day == "Saturday" || day == "Sunday"
@@ -31,8 +31,10 @@ class NewYork
       else
         @final_week_cost += @weekday_rides*2.5
       end
-    @final_week_cost = @final_week_cost/1.05
     end
+
+    @final_week_cost = @final_week_cost/1.05
+
   end
 
   def organize
@@ -134,6 +136,6 @@ class NewYork
     end
   end
 
-  
+
 
 end
