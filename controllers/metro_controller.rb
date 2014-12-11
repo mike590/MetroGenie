@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class MetroController < ApplicationController
 
   get '/' do
     erb :index

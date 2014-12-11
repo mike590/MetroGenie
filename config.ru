@@ -8,4 +8,4 @@ end
 
 require 'date'
 
-map('/'){ run WelcomeController }
+map('/'){ run MetroController }
