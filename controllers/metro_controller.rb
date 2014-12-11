@@ -15,7 +15,7 @@ class MetroController < ApplicationController
     weekend_rides = params[:weekend_rides].to_i
     new_card = params[:new_card]
 
-    current_transaction = NewYork.new(date_array, start_date, end_date, weekday_rides, weekend_rides)
+    current_transaction = NewYork.new(date_array, start_date, end_date, weekday_rides, weekend_rides, new_card)
     current_transaction.organize
     current_transaction.calculate
     choices = current_transaction.generate_choices
