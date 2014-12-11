@@ -20,7 +20,8 @@ class MetroController < ApplicationController
     binding.pry
 
     content_type :json
-    date_array.to_json
+    choices.to_json
+     
 
 
   end
