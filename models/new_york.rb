@@ -12,7 +12,7 @@ class NewYork
     @model_week = []
     @weekly_cost = 0
     @final_week_cost = 0
-    @new_card
+    @new_card = new_card
   end
 
   def calculate
@@ -22,6 +22,7 @@ class NewYork
       else
         @weekly_cost += @weekday_rides*2.5
       end
+      @weekly_cost = @weekly_cost/1.05
     end
 
     @final_week.each do |day|
@@ -30,6 +31,7 @@ class NewYork
       else
         @final_week_cost += @weekday_rides*2.5
       end
+    @final_week_cost = @final_week_cost/1.05
     end
   end
 
