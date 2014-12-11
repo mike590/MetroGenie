@@ -51,7 +51,19 @@ function submitData(){
     dataType: 'JSON',
     data: {start_date: $startDate.val(), end_date: $endDate.val(), weekday_rides: $weekdayRides.val(), weekend_rides: $weekendRides.val()},
     success: function(data){
-      $dateArray = $(data);
+      $choices = $(data);
     }
   });
+}
+
+function flexible(option1, option2){
+  if(option1.weekly + option1.monthly > option2.weekly + option2.monthly){
+
+  }
+  elsif(option1.weekly + option1.monthly < option2.weekly + option2.monthly){
+
+  }
+  else{
+
+  }
 }

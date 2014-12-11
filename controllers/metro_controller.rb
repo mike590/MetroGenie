@@ -1,4 +1,4 @@
-class WelcomeController < ApplicationController
+class MetroController < ApplicationController
 
   get '/' do
     erb :index
@@ -20,7 +20,8 @@ class WelcomeController < ApplicationController
     binding.pry
 
     content_type :json
-    date_array.to_json
+    choices.to_json
+     
 
 
   end
