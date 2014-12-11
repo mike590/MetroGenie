@@ -2,6 +2,7 @@ var $startDate;
 var $endDate;
 var $weekdayRides;
 var $weekendRides;
+var $newCard
 var $submit;
 var $dateArray;
 
@@ -45,25 +46,14 @@ $(function(){
 });
   
 function submitData(){
+  $newCard = $('input:checked')
   $.ajax({
     url: '/calculate',
     method: 'GET',
     dataType: 'JSON',
-    data: {start_date: $startDate.val(), end_date: $endDate.val(), weekday_rides: $weekdayRides.val(), weekend_rides: $weekendRides.val()},
+    data: {start_date: $startDate.val(), end_date: $endDate.val(), weekday_rides: $weekdayRides.val(), weekend_rides: $weekendRides.val(), new_card: $newCard.val() },
     success: function(data){
       $choices = $(data);
     }
   });
-}
-
-function flexible(option1, option2){
-  if(option1.weekly + option1.monthly > option2.weekly + option2.monthly){
-
-  }
-  elsif(option1.weekly + option1.monthly < option2.weekly + option2.monthly){
-
-  }
-  else{
-
-  }
 }
