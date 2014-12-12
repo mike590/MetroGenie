@@ -5,6 +5,7 @@ var $weekendRides;
 var $newCard
 var $submit;
 var $dateArray;
+var choices;
 
 $(function(){
   $startDate = $('#start-date')
@@ -53,7 +54,7 @@ function submitData(){
     dataType: 'JSON',
     data: {start_date: $startDate.val(), end_date: $endDate.val(), weekday_rides: $weekdayRides.val(), weekend_rides: $weekendRides.val(), new_card: $newCard.val() },
     success: function(data){
-      $choices = $(data);
+      choices = data;
     }
   });
 }

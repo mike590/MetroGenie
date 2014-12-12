@@ -19,7 +19,6 @@ class MetroController < ApplicationController
     current_transaction.organize
     current_transaction.calculate
     choices = current_transaction.generate_choices
-    binding.pry
 
     content_type :json
     choices.to_json
