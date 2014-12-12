@@ -2,13 +2,26 @@
   Welcome to the Index!
 
 
-  <p>How long will you be using the metro?</p>
-  <form id='user-questions' action='/calculate' method='post'>
+
+<br>
+<div id='card-select-container'>
+  <div id='card-options-container'>
+    <div class='card-selector-div'></div>
+    <div class='card-selector-div' id='two-borders'><span id='new-card' class='card-selector'>New</span></div>
+    <div class='card-selector-div'><span id='refill-card' class='card-selector'>Refill</span></div>
+  </div>
+  <div class='card-selector-div'></div>
+  <div id='static-card-selector'><span id='center-static-card'>Card</span></div>
+  <div class='card-selector-div'></div>
+  <div class='clear'></div>
+</div>
 
 
-  <input type='radio' name='new_card' value="true" id='new-card' checked />New Card</br>
-  <input type='radio' name='new_card' value="false" id='new-card' />Refill Card</br>
-  <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
+<p>How long will you be using the metro?</p>
+<form id='user-questions' action='/calculate' method='post'>
+
+<!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
+
 
   First: <input id='start-date' type='date' name='start_date' autofocus/>
 
@@ -65,3 +78,6 @@
     <li><img src="/images/times_square.jpg" /></li>
   </ul>
 </div>
+
+<script type='template' id='option-view-template'></script>
+

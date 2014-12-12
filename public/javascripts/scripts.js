@@ -5,6 +5,9 @@ var $weekendRides;
 var $newCard
 var $submit;
 var $dateArray;
+var choices;
+var optionList;
+var optionListView;
 
 $(function(){
   $startDate = $('#start-date')
@@ -47,13 +50,12 @@ $(function(){
   
 function submitData(){
   $newCard = $('input:checked')
-  $.ajax({
-    url: '/calculate',
-    method: 'GET',
-    dataType: 'JSON',
-    data: {start_date: $startDate.val(), end_date: $endDate.val(), weekday_rides: $weekdayRides.val(), weekend_rides: $weekendRides.val(), new_card: $newCard.val() },
-    success: function(data){
-      $choices = $(data);
-    }
-  });
+  optionList = new OptionList()
+  optionList.fetch({
+    data: {start_date: $startDate.val(), 
+           end_date: $endDate.val(), 
+           weekday_rides: $weekdayRides.val(), 
+           weekend_rides: $weekendRides.val(), 
+           new_card: $newCard.val() }    
+  })
 }
