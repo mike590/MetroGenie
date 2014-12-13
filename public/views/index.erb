@@ -1,83 +1,99 @@
 <div class="form-container">
-  Welcome to the Index!
-
-
-
-<br>
-<div id='card-select-container'>
-  <div id='card-options-container'>
-    <div class='card-selector-div'></div>
-    <div class='card-selector-div' id='two-borders'><span id='new-card' class='card-selector'>New</span></div>
-    <div class='card-selector-div'><span id='refill-card' class='card-selector'>Refill</span></div>
+  <div id='bx-container'
+    <ul class="bxslider">
+      <li><img src="/images/14subway.gif" /></li>
+      <li><img src="/images/all_the_trains.jpg" /></li>
+      <li><img src="/images/building.jpg" /></li>
+      <li><img src="/images/rockefeller.gif" /></li>
+      <li><img src="/images/seeingNY.gif" /></li>
+      <li><img src="/images/subwaynewspaper.gif" /></li>
+      <li><img src="/images/times_square.jpg" /></li>
+    </ul>
   </div>
-  <div class='card-selector-div'></div>
-  <div id='static-card-selector'><span id='center-static-card'>Card</span></div>
-  <div class='card-selector-div'></div>
-  <div class='clear'></div>
+  <div id='the-form-container'>
+    Welcome to the Index!
+
+
+
+  <br>
+  <div id='card-select-container'>
+    <div id='card-options-container'>
+      <div class='card-selector-div'></div>
+      <div class='card-selector-div' id='two-borders'><span id='new-card' class='card-selector'>New</span></div>
+      <div class='card-selector-div'><span id='refill-card' class='card-selector'>Refill</span></div>
+    </div>
+    <div class='card-selector-div'></div>
+    <div id='static-card-selector'><span id='center-static-card'>Card</span></div>
+    <div class='card-selector-div'></div>
+    <div class='clear'></div>
+  </div>
+
+
+  <p>How long will you be using the metro?</p>
+  <form id='user-questions' action='/calculate' method='post'>
+
+  <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
+
+
+    First: <input id='start-date' type='date' name='start_date' autofocus/>
+
+
+
+    Last: <input id='end-date' type='date' name='end_date' />
+    <br></br>
+
+    <p>How many rides per day?</p>
+    <p>
+    Weekdays: <select id='weekday-rides' name='weekday_rides' >
+    <option value='Choose'>Choose</option>
+    <option value='0'>0</option>
+    <option value='1'>1</option>
+    <option value='2'>2</option>
+    <option value='3'>3</option>
+    <option value='4'>4</option>
+    <option value='5'>5</option>
+    <option value='6'>6</option>
+    <option value='7'>7</option>
+    <option value='8'>8</option>
+    <option value='9'>9</option>
+    </select></p>
+
+    <p>Weekends: <select id='weekend-rides' name='weekend_rides' >
+    <option value='Choose'>Choose</option>
+    <option value='0'>0</option>
+    <option value='1'>1</option>
+    <option value='2'>2</option>
+    <option value='3'>3</option>
+    <option value='4'>4</option>
+    <option value='5'>5</option>
+    <option value='6'>6</option>
+    <option value='7'>7</option>
+    <option value='8'>8</option>
+    <option value='9'>9</option>
+    </select></p>
+
+    <br></br>
+    <input id='submit' type='submit' />
+
+
+    </form>
+  </div>
 </div>
 
-
-<p>How long will you be using the metro?</p>
-<form id='user-questions' action='/calculate' method='post'>
-
-<!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
-
-
-  First: <input id='start-date' type='date' name='start_date' autofocus/>
-
-
-
-  Last: <input id='end-date' type='date' name='end_date' />
-  <br></br>
-
-  <p>How many rides per day?</p>
-  <p>
-  Weekdays: <select id='weekday-rides' name='weekday_rides' >
-  <option value='Choose'>Choose</option>
-  <option value='0'>0</option>
-  <option value='1'>1</option>
-  <option value='2'>2</option>
-  <option value='3'>3</option>
-  <option value='4'>4</option>
-  <option value='5'>5</option>
-  <option value='6'>6</option>
-  <option value='7'>7</option>
-  <option value='8'>8</option>
-  <option value='9'>9</option>
-  </select></p>
-
-  <p>Weekends: <select id='weekend-rides' name='weekend_rides' >
-  <option value='Choose'>Choose</option>
-  <option value='0'>0</option>
-  <option value='1'>1</option>
-  <option value='2'>2</option>
-  <option value='3'>3</option>
-  <option value='4'>4</option>
-  <option value='5'>5</option>
-  <option value='6'>6</option>
-  <option value='7'>7</option>
-  <option value='8'>8</option>
-  <option value='9'>9</option>
-  </select></p>
-
-  <br></br>
-  <input id='submit' type='submit' />
-
-
-  </form>
-</div>
+<div id='real-option-container'></div>
 
 <div class="option-container">
-  <ul class="bxslider">
-    <li><img src="/images/14subway.gif" /></li>
-    <li><img src="/images/all_the_trains.jpg" /></li>
-    <li><img src="/images/building.jpg" /></li>
-    <li><img src="/images/rockefeller.gif" /></li>
-    <li><img src="/images/seeingNY.gif" /></li>
-    <li><img src="/images/subwaynewspaper.gif" /></li>
-    <li><img src="/images/times_square.jpg" /></li>
-  </ul>
+  
 </div>
 
-<script type='template' id='option-view-template'></script>
+<script type='template' id='option-view-template'>
+  <ul>
+      <li>Type: <%%= type %></li>
+      <li>Weekly: <%%= weekly %></li>
+      <li>Value: <%%= value %></li>
+      <li>Total Cost: <%%= total_cost %></li>
+  </ul>
+</script>
+<script src='/javascripts/views/OptionView.js'></script>
+
 

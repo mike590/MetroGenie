@@ -21,11 +21,10 @@ class MetroController < ApplicationController
     choices = current_transaction.generate_choices
 
     best_choice = current_transaction.best_choice(choices)
-    binding.pry
 
     content_type :json
     best_choice.to_json
-
+    
 
 
   end
