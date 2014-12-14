@@ -4,6 +4,7 @@ $(document).ready(function(){
     controls: false,
     pause: 3000,
     mode: "fade",
-    speed: 800
+    speed: 800,
+    adaptiveHeight: false
   });
 });

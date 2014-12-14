@@ -6,8 +6,8 @@ var $newCard
 var $submit;
 var $dateArray;
 var choices;
-var optionList;
-var optionListView;
+var choiceList;
+var choiceListView;
 
 $(function(){
   $startDate = $('#start-date')
@@ -49,20 +49,21 @@ $(function(){
 });
   
 function submitData(){
-  $newCard = $('input:checked')
-  optionList = new OptionList()
+  console.log("submit data");
+  // $newCard = $('input:checked')
   debugger
-  optionList.fetch({
+  choiceList = new ChoiceList()
+  choiceList.fetch({
     data: {start_date: $startDate.val(), 
            end_date: $endDate.val(), 
            weekday_rides: $weekdayRides.val(), 
-           weekend_rides: $weekendRides.val(), 
-           new_card: $newCard.val() 
+           weekend_rides: $weekendRides.val() 
+           // new_card: $newCard.val() 
     },
     success: function(){
-      optionListView = new OptionListView({
-        collection: optionList,
-        el: $('#real-option-container')
+      choiceListView = new ChoiceListView({
+        collection: choiceList,
+        el: $('#choice-container')
       })
     }    
   })
