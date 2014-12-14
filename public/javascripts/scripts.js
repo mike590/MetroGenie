@@ -51,11 +51,19 @@ $(function(){
 function submitData(){
   $newCard = $('input:checked')
   optionList = new OptionList()
+  debugger
   optionList.fetch({
     data: {start_date: $startDate.val(), 
            end_date: $endDate.val(), 
            weekday_rides: $weekdayRides.val(), 
            weekend_rides: $weekendRides.val(), 
-           new_card: $newCard.val() }    
+           new_card: $newCard.val() 
+    },
+    success: function(){
+      optionListView = new OptionListView({
+        collection: optionList,
+        el: $('#real-option-container')
+      })
+    }    
   })
 }
