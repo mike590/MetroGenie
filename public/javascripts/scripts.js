@@ -65,6 +65,7 @@ function submitData(){
         collection: choiceList,
         el: $('.choice-container')
       })
+      choiceListView.render();
     }    
   })
 }

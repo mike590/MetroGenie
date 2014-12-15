@@ -68,84 +68,80 @@ class NewYork
     end
     # If there is no final week, two best options are pure money on card VS. all weekly unlimiteds
     if @final_week_length == 0
-      choices = {
-        option_1: {
+      choices = [
+        {
           type: "value",
           weekly: 0,
           value: money_on_card_cost,
           total_cost: money_on_card_cost
-        },
-        option_2: {
+        }, {
           type: "flexible",
           weekly: @completed_weeks,
           value: 0,
           total_cost: pure_weekly_unlimited_cost
         }
-      }
+      ]
     else
 
       # Two best options are pure money on card VS. weekly unlimiteds + money for final week
       if money_on_card_cost < pure_weekly_unlimited_cost  && hybrid_cost < pure_weekly_unlimited_cost
-        choices = {
-          option_1: {
+        choices = [
+          {
             type: "value",
             weekly: 0,
             value: money_on_card_cost,
             total_cost: money_on_card_cost
-          },
-          option_2: {
+          }, {
             type: "flexible",
             weekly: @completed_weeks,
             value: @final_week_cost,
             total_cost: hybrid_cost
           }
-        }
+        ]
         # Two best options are pure money on card VS. all weekly unlimiteds
       elsif money_on_card_cost < hybrid_cost  && pure_weekly_unlimited_cost < hybrid_cost
-        choices = {
-          option_1: {
+        choices = [
+          {
             type: "value",
             weekly: 0,
             value: money_on_card_cost,
             total_cost: money_on_card_cost
-          },
-          option_2: {
+          }, {
             type: "flexible",
             weekly: @completed_weeks + 1,
             value: 0,
             total_cost: pure_weekly_unlimited_cost
           }
-        }
+        ]
         # Two best options are all weekly unlimiteds VS. weekly unlimiteds + money for final week
       else
-        choices = {
-          option_1: {
+        choices = [
+          {
             type: "value",
             weekly: @completed_weeks,
             value: @final_week_cost,
             total_cost: hybrid_cost
-          },
-          option_2: {
+          }, {
             type: "flexible",
             weekly: @completed_weeks + 1,
             value: 0,
             total_cost: pure_weekly_unlimited_cost
           }
-        }
+        ]
       end
     end
   end
 
   def best_choice(choices)
-    difference = choices[:option_1][:total_cost] - choices[:option_2][:total_cost]
+    difference = choices[0][:total_cost] - choices[1][:total_cost]
     if difference > 0
-      choices[:option_2][:priority] = "best"
+      choices[1][:priority] = "best"
       return choices
     elsif difference >= -5
       # both options will display without priority
       return choices
     else
-      choices[:option_1][:priority] = "best"
+      choices[0][:priority] = "best"
       return choices
     end
   end
