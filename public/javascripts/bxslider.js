@@ -5,6 +5,7 @@ $(document).ready(function(){
     pause: 3000,
     mode: "fade",
     speed: 800,
-    adaptiveHeight: false
+    adaptiveHeight: false,
+    pager: false
   });
 });
