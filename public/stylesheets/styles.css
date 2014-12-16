@@ -1,21 +1,30 @@
-.single-choice-container ul {
-  list-style-type: none;
+.choice-container {
+  position: absolute;
+  background-color: green;
+  height: 50%;
+  width: 110%;
   
 }
 
-.single-choice-container ul li {
-  background-color: blue;
-  color: orange;
-  text-align: center;
-  line-height: 1;
-  margin: 5px 0px;
-}
-
 .single-choice-container {
+  position: relative;
+  background-color: red;
   height: 33%;
   width: 45%;
+  margin: 0 auto;
   float: left;
 }
+
+.choice-card {
+  background-color: blue;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 95%;
+  
+}
+
 
 li img {
   width: 100%;
