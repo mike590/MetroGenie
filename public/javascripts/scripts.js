@@ -51,7 +51,6 @@ $(function(){
 function submitData(){
   console.log("submit data");
   // $newCard = $('input:checked')
-  debugger
   choiceList = new ChoiceList()
   choiceList.fetch({
     data: {start_date: $startDate.val(), 

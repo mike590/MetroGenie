@@ -92,12 +92,14 @@
 </div>
 
 <script type='template' id='choice-view-template'>
-  <ul>
-      <li>Type: <%%= type %></li>
-      <li>Weekly: <%%= weekly %></li>
-      <li>Value: <%%= value %></li>
-      <li>Total Cost: <%%= total_cost %></li>
-  </ul>
+  <div class='single-choice-container' >
+    <ul>
+        <li><div class='choice-info-block' ><%%= type %></div></li>
+        <li><div class='choice-info-block' ><%%= weekly %></div></li>
+        <li><div class='choice-info-block' ><%%= value %></div></li>
+        <li><div class='choice-info-block' ><%%= total_cost %></div></li>
+    </ul>
+  </div>
 </script>
 <script src='/javascripts/views/ChoiceView.js'></script>
 

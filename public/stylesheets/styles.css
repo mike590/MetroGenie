@@ -1,3 +1,22 @@
+.single-choice-container ul {
+  list-style-type: none;
+  
+}
+
+.single-choice-container ul li {
+  background-color: blue;
+  color: orange;
+  text-align: center;
+  line-height: 1;
+  margin: 5px 0px;
+}
+
+.single-choice-container {
+  height: 33%;
+  width: 45%;
+  float: left;
+}
+
 li img {
   width: 100%;
 }
