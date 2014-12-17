@@ -1,73 +1,39 @@
-<div id="carousel-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-generic" data-slide-to="2"></li>
-  </ol>
+<script>
+  $(function(){
+    var imageIndex = 0,
+        imageArray = [
+          "/images/times_square2.jpg",
+          "/images/rockefellar2.gif",
+          "/images/all_the_trains2.jpg",
+          "/images/building2.jpg",
+          "/images/seeingNY2.gif",
+          "/images/subwaynewspaper2.gif",
+          "/images/14subway2.gif"
+        ];
+    changeBackground = function changeBackground(){
+      var index = imageIndex++ % imageArray.length;
+      $('.slideshow').css({
+        'background': "url('" + imageArray[index] + "')",
+        'background-repeat' : 'no-repeat', 
+        'background-size' : 'cover'
+      })
+    };
+    setInterval(changeBackground, 2000);
+  })
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active">
-      <img src="/images/times_square2.jpg" alt="...">
-    </div>
-    <div class="item">
-      <img src="/images/rockefellar2.gif" alt="...">
-      <div class="carousel-caption">
-        ...
-      </div>
-    </div>
-    ...
+</script>
+
+<div class='slideshow col-xs-12' style='height: 600px; background-repeat: no-repeat; background: url(/images/rockefellar2.gif); background-size: cover;'>
+  <div style='height: 67%; opacity: 0.0; '>
   </div>
-
- 
-
-  How long will you be using the metro?
-  <form id='user-questions' action='/calculate' method='post'>
-
-  <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
+  <div style='height: 20%; opacity: 0.6; background-color: black;'>
+  </div>
+</div>
 
 
-    First: <input id='start-date' type='date' name='start_date' autofocus/>
+    
+</br></br></br>
 
-
-
-    Last: <input id='end-date' type='date' name='end_date' />
-
-    <p>How many rides per day?</p>
-    Weekdays: <select id='weekday-rides' name='weekday_rides' >
-    <option value='Choose'>Choose</option>
-    <option value='0'>0</option>
-    <option value='1'>1</option>
-    <option value='2'>2</option>
-    <option value='3'>3</option>
-    <option value='4'>4</option>
-    <option value='5'>5</option>
-    <option value='6'>6</option>
-    <option value='7'>7</option>
-    <option value='8'>8</option>
-    <option value='9'>9</option>
-    </select></p>
-
-    <p>Weekends: <select id='weekend-rides' name='weekend_rides' >
-    <option value='Choose'>Choose</option>
-    <option value='0'>0</option>
-    <option value='1'>1</option>
-    <option value='2'>2</option>
-    <option value='3'>3</option>
-    <option value='4'>4</option>
-    <option value='5'>5</option>
-    <option value='6'>6</option>
-    <option value='7'>7</option>
-    <option value='8'>8</option>
-    <option value='9'>9</option>
-    </select></p>
-
-    <input id='submit' type='submit' />
-
-
-    </form>
-  
 
 <div class="choice-container">
   
