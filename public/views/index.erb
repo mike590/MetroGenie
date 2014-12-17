@@ -1,42 +1,17 @@
-<div class="form-container">
-  <div id='bx-container'
-    <ul class="bxslider">
-      <li><img src="/images/times_square2.jpg" /></li>
-      <li><img src="/images/rockefellar2.gif" /></li>
-      <li><img src="/images/seeingNY2.gif" /></li>
-      <li><img src="/images/building2.jpg" /></li>
-      <li><img src="/images/subwaynewspaper2.gif" /></li>
-      <li><img src="/images/14subway2.gif" /></li>
-      <li><img src="/images/all_the_trains2.jpg" /></li>
-<!--       <li><img src="/images/output_72cknc.gif" /></li>
-      <li><img src="/images/14subway.gif" /></li>
-      <li><img src="/images/all_the_trains.jpg" /></li>
-      <li><img src="/images/building.jpg" /></li>
-      <li><img src="/images/seeingNY.gif" /></li>
-      <li><img src="/images/subwaynewspaper.gif" /></li>
-      <li><img src="/images/times_square.jpg" /></li> -->
-    </ul>
-  </div>
-  <div id='the-form-container'>
-    Welcome to the Index!
+<div id='bx-container col-xs-10'>
+  <ul class="bxslider col-xs-12">
+    <li><img src="/images/times_square2.jpg" /></li>
+    <li><img src="/images/rockefellar2.gif" /></li>
+    <li><img src="/images/seeingNY2.gif" /></li>
+    <li><img src="/images/building2.jpg" /></li>
+    <li><img src="/images/subwaynewspaper2.gif" /></li>
+    <li><img src="/images/14subway2.gif" /></li>
+    <li><img src="/images/all_the_trains2.jpg" /></li>
+  </ul>
+</div>
+  
 
-
-
-  <br>
-  <div id='card-select-container'>
-    <div id='card-options-container'>
-      <div class='card-selector-div'></div>
-      <div class='card-selector-div' id='two-borders'><span id='new-card' class='card-selector'>New</span></div>
-      <div class='card-selector-div'><span id='refill-card' class='card-selector'>Refill</span></div>
-    </div>
-    <div class='card-selector-div'></div>
-    <div id='static-card-selector'><span id='center-static-card'>Card</span></div>
-    <div class='card-selector-div'></div>
-    <div class='clear'></div>
-  </div>
-
-
-  <p>How long will you be using the metro?</p>
+  How long will you be using the metro?
   <form id='user-questions' action='/calculate' method='post'>
 
   <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
@@ -47,10 +22,8 @@
 
 
     Last: <input id='end-date' type='date' name='end_date' />
-    <br></br>
 
     <p>How many rides per day?</p>
-    <p>
     Weekdays: <select id='weekday-rides' name='weekday_rides' >
     <option value='Choose'>Choose</option>
     <option value='0'>0</option>
@@ -79,21 +52,19 @@
     <option value='9'>9</option>
     </select></p>
 
-    <br></br>
     <input id='submit' type='submit' />
 
 
     </form>
-  </div>
-</div>
+  
 
 <div class="choice-container">
   
 </div>
 
 <script type='template' id='choice-view-template'>
-  <div class='single-choice-container' >
-    <div class='choice-card' >
+  <div class='container' >
+    <div class='' >
     <%%= type %></br>
     <%%= weekly %></br>
     <%%= value %></br>
