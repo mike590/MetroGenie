@@ -2,13 +2,13 @@
   $(function(){
     var imageIndex = 0,
         imageArray = [
-          "/images/times_square2.jpg",
-          "/images/rockefellar2.gif",
-          "/images/all_the_trains2.jpg",
-          "/images/building2.jpg",
           "/images/seeingNY2.gif",
           "/images/subwaynewspaper2.gif",
+          "/images/building2.jpg",
+          "/images/times_square2.jpg",
           "/images/14subway2.gif"
+          "/images/all_the_trains2.jpg",
+          "/images/rockefellar2.gif",
         ];
     changeBackground = function changeBackground(){
       var index = imageIndex++ % imageArray.length;
@@ -18,15 +18,15 @@
         'background-size' : 'cover'
       })
     };
-    setInterval(changeBackground, 2000);
+    setInterval(changeBackground, 15000);
   })
 
 </script>
 
-<div class='slideshow col-xs-12' style='height: 600px; background-repeat: no-repeat; background: url(/images/rockefellar2.gif); background-size: cover;'>
-  <div style='height: 67%; opacity: 0.0; '>
+<div class='slideshow col-xs-12' style='height: 600px; background-repeat: no-repeat; background: url(/images/rockefellar2.gif); background-size: cover; padding: 0 0;'>
+  <div style='height: 70%; opacity: 0.0; '>
   </div>
-  <div style='height: 20%; opacity: 0.6; background-color: black;'>
+  <div style='height: 30%; opacity: 0.6; background-color: black;'>
   </div>
 </div>
 
