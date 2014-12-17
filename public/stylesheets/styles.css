@@ -1,3 +1,20 @@
 .slideshow {
   transition: background-image 1s ease-in-out;
 }
+
+#logo {
+  font-family: Helvetica;
+  text-align: center;
+  color: lightblue;
+  text-shadow: 1px 1px black;
+}
+
+#logo h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+
+#logo h3 {
+  color: white;
+  text-shadow: 1px 1px black;
+}
