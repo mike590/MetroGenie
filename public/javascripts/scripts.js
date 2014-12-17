@@ -10,12 +10,6 @@ var choiceList;
 var choiceListView;
 
 $(function(){
-  // $('.slideshow').cycle({
-  //   fx: 'fade',
-  //   timeout: 4000,
-  //   speed: 2500,
-  //   slideExpr: 'img'
-  // })
   $startDate = $('#start-date')
   $endDate = $('#end-date')
   $weekdayRides = $('#weekday-rides')
