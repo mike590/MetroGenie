@@ -1,15 +1,36 @@
-<div id='bx-container col-xs-10'>
-  <ul class="bxslider col-xs-12">
-    <li><img src="/images/times_square2.jpg" /></li>
+<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="/images/times_square2.jpg" alt="...">
+    </div>
+    <div class="item">
+      <img src="/images/rockefellar2.gif" alt="...">
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- Controls -->
+
+    <!-- <li><img src="/images/times_square2.jpg" /></li>
     <li><img src="/images/rockefellar2.gif" /></li>
     <li><img src="/images/seeingNY2.gif" /></li>
     <li><img src="/images/building2.jpg" /></li>
     <li><img src="/images/subwaynewspaper2.gif" /></li>
     <li><img src="/images/14subway2.gif" /></li>
     <li><img src="/images/all_the_trains2.jpg" /></li>
-  </ul>
-</div>
-  
+ 
+   -->
 
   How long will you be using the metro?
   <form id='user-questions' action='/calculate' method='post'>

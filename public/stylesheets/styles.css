@@ -1,97 +1,12 @@
-/*.choice-container {
-  position: absolute;
-  background-color: green;
-  height: 50%;
-  width: 110%;
-  
-}
-
-.single-choice-container {
-  position: relative;
-  background-color: red;
-  height: 33%;
-  width: 45%;
-  margin: 0 auto;
-  float: left;
-}
-
-.choice-card {
-  background-color: blue;
-  position: absolute;
-  top: 5%;
-  left: 5%;
-  width: 90%;
-  height: 95%;
-  
-}
-
-
-li img {
-  width: 100%;
-}
-
-.form-container {
-    width: 100%;
-    height: 50%;
-    position: relative;
-}
-
-#bx-container, 
-#the-form-container {
+#bx-container {
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
-#the-form-container {
-    z-index: 60;
+.carousel .item {
+  left: 0 !important;
+    -webkit-transition: opacity .4s; /*adjust timing here */
+        -moz-transition: opacity .4s;
+          -o-transition: opacity .4s;
+            transition: opacity .4s;
 }
-
-body {
-  background-color: yellow;
-  color: red;
-}
-
-#card-select-container {
-  margin: 0 auto;
-  width: 150px;  
-}
-
-#card-options-container {
-  width: 50px;
-  height: 100px;
-  float: left;
-}
-
-.card-selector-div {
-  width: 50px;
-  height: 30px;
-  text-align: center;
-}
-
-.card-selector {
-  position: relative;
-  margin: 0 auto;
-  top: 20%;
-}
-
-#static-card-selector {
-  width: 50px;
-  height: 30px;
-  float: left;
-}
-
-#center-static-card {
-  position: relative;
-  top: 25%;
-}
-
-#two-borders {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-.clear {
-  clear: both;
-}*/

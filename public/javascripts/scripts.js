@@ -10,6 +10,9 @@ var choiceList;
 var choiceListView;
 
 $(function(){
+  $('.carousel').carousel({
+    interval: 1800
+  })
   $startDate = $('#start-date')
   $endDate = $('#end-date')
   $weekdayRides = $('#weekday-rides')
