@@ -6,7 +6,7 @@
   font-family: Helvetica;
   text-align: center;
   color: lightblue;
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 2px black;
 }
 
 #logo h1 {
@@ -14,7 +14,7 @@
   font-weight: 900;
 }
 
-#logo h3 {
+#logo h2 {
   color: white;
-  text-shadow: 1px 1px black;
+  text-shadow: 2px 2px black;
 }
