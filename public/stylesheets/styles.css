@@ -14,7 +14,11 @@
   font-weight: 900;
 }
 
-#logo h2 {
+#logo h3 {
   color: white;
-  text-shadow: 2px 2px black;
+}
+
+#logo-background {
+  background-color: rgba(125, 125, 130, 0.4);
+  border-radius: 20px;
 }
