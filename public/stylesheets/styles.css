@@ -58,8 +58,21 @@
   text-align: center;
 }
 
+#form-div-2 p {
+  margin-left: -5%;
+}
+
+#form-div-2 input {
+  margin-left: 5%;
+}
+
 #form-div-3 p {
   margin-top: 10%;
+  margin-left: -5%;
+}
+
+#form-div-3 select {
+  margin-left: 5%;
 }
 
 .question {
