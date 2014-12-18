@@ -104,6 +104,14 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+#choice-div {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.total-cost {
+  background-color: rgba(209, 2, 157, .4);
+}
+
 .card-slot {
   height: 100%;
   top: 35%;
@@ -124,25 +132,21 @@
 }
 
 .borders {
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 .top-border {
-  border-top: 2px solid black;
+  border-top: 2px solid white;
 }
 
 .bottom-border{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .left-border{
-  border-left: 1px solid black;
+  border-left: 1px solid white;
 }
 
 .right-border{
-  border-right: 1px solid black;
-}
-
-.oj-border {
-  border: 2px solid orange;
+  border-right: 1px solid white;
 }
