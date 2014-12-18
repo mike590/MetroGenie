@@ -15,14 +15,18 @@
 }
 
 #logo h1 {
-  font-size: 60px;
+  font-size: 3em;
   font-weight: 900;
   margin-bottom: -15px;
 }
 
+#logo span {
+  font-size: 0px;
+}
+
 #logo h3 {
   color: white;
-  padding-bottom: 10px;
+  padding-bottom: 1em;
 }
 
 #logo-background {
@@ -46,7 +50,7 @@
 #form-div-2,
 #form-div-3, 
 #form-div-4 {
-  border: 2px solid orange; 
+/*  border: 2px solid orange; */
   height: 100%; 
   text-align: center;
 }
