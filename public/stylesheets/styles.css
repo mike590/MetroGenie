@@ -1,3 +1,7 @@
+.container-fluid {
+  background-color: rgba(217, 219, 217, 1);
+}
+
 .slideshow {
   transition: background-image 1s ease-in-out;
 }
@@ -47,10 +51,6 @@
 
 .center-text {
   text-align: center;
-}
-
-.v-center {
-  top: 35%;
 }
 
 .borders {
