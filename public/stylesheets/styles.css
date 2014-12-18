@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #logo {
   color: lightblue;
   text-shadow: 1px 1px white;
@@ -170,4 +171,8 @@ body {
 }
 .clear {
   clear: both;
+=======
+.slideshow {
+  transition: background-image 1s ease-in-out;
+>>>>>>> 5ded58573094a60660e06c1dd5d88728d4126928
 }
