@@ -92,7 +92,7 @@
   margin-top: 12%;
 }
 
-#choice-div {
+#choices-image-div {
   background-image: url(/images/mta_vintage_car.png); 
   background-image: cover; 
   background-size: 100%; 
@@ -100,10 +100,15 @@
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+#choice-div {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .card-slot {
   height: 100%;
   top: 35%;
   text-align: center;
+  color: white;
 }
 
 .full-height {
@@ -119,25 +124,21 @@
 }
 
 .borders {
-  border: 2px solid black;
+  border: 2px solid white;
 }
 
 .top-border {
-  border-top: 2px solid black;
+  border-top: 2px solid white;
 }
 
 .bottom-border{
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
 }
 
 .left-border{
-  border-left: 1px solid black;
+  border-left: 1px solid white;
 }
 
 .right-border{
-  border-right: 1px solid black;
-}
-
-.oj-border {
-  border: 2px solid orange;
+  border-right: 1px solid white;
 }
