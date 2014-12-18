@@ -22,3 +22,15 @@
   background-color: rgba(125, 125, 130, 0.4);
   border-radius: 20px;
 }
+
+.full-height {
+  height: 100%;
+}
+
+.borders {
+  border: 2px solid black;
+}
+
+.top-border {
+  border-top: 2px solid black;
+}
