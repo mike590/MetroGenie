@@ -9,28 +9,29 @@
 #logo {
   font-family: Helvetica;
   text-align: center;
-  color: lightblue;
-  text-shadow: 2px 2px black;
-  height: 60%
+  color: #D1029D;
+  height: 65%
 
 }
 
 #logo h1 {
   font-size: 60px;
   font-weight: 900;
+  margin-bottom: -15px;
 }
 
 #logo h3 {
   color: white;
+  padding-bottom: 10px;
 }
 
 #logo-background {
-  background-color: rgba(125, 125, 130, 0.4);
-  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 #empty-div {
-  height: 15%;
+  height: 10%;
 }
 
 .form-div {
@@ -62,6 +63,6 @@
 #submit {
   background-color: red;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: Helvetica;
   font-size: 18px;
