@@ -5,8 +5,8 @@
 #logo {
   font-family: Helvetica;
   text-align: center;
-  color: lightblue;
-  text-shadow: 2px 2px black;
+  color: #F229C0;
+  /*text-shadow: .5px .5px gray;*/
 }
 
 #logo h1 {
@@ -19,7 +19,7 @@
 }
 
 #logo-background {
-  background-color: rgba(125, 125, 130, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
 
@@ -31,12 +31,26 @@
   background-color: black;
 }
 
+.card-slot {
+  height: 100%;
+  top: 35%;
+  text-align: center;
+}
+
 .full-height {
   height: 100%;
 }
 
+.fifteen-height {
+  height: 15%;
+}
+
 .center-text {
   text-align: center;
+}
+
+.v-center {
+  top: 35%;
 }
 
 .borders {
@@ -45,6 +59,18 @@
 
 .top-border {
   border-top: 2px solid black;
+}
+
+.bottom-border{
+  border-bottom: 1px solid black;
+}
+
+.left-border{
+  border-left: 1px solid black;
+}
+
+.right-border{
+  border-right: 1px solid black;
 }
 
 .oj-border {
