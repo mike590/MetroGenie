@@ -17,6 +17,8 @@ Getting new card or have existing card?
  - new card: $2.50 x days_of_use x daily_uses = trip_fare; (trip_fare/1.05) + $1 = final_cost
  - existing: $2.50 x days_of_use x daily_uses = trip_fare; (trip_fare/1.05)      = final_cost
 
+ *** If EXISTING CARD: ask if there's a balance. We'll need to subtract existing amount from the overall amount in "value" option.
+
 How many days will you be using this metrocard?
  - sliding scale? textfield?
 
