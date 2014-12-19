@@ -61,8 +61,13 @@
   margin-top: 2%;
 }
 
+#form-div-1 p{
+  margin-top: 10%;
+}
+
 #form-div-2 p {
   margin-left: -5%;
+  margin-top: 6%;
 }
 
 #form-div-2 input {
@@ -70,7 +75,7 @@
 }
 
 #form-div-3 p {
-  margin-top: 10%;
+  margin-top: 9%;
   margin-left: -5%;
 }
 
@@ -93,7 +98,7 @@
   border-radius: 5px;
   font-family: Helvetica;
   font-size: 18px;
-  margin-top: 12%;
+  margin-top: 18%;
 }
 
 .choice {

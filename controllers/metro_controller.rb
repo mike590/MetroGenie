@@ -14,6 +14,11 @@ class MetroController < ApplicationController
     weekday_rides = params[:weekday_rides].to_i
     weekend_rides = params[:weekend_rides].to_i
     new_card = params[:new_card]
+    if new_card == "true"
+      new_card = true
+    else
+      new_card = false
+    end
 
     current_transaction = NewYork.new(date_array, start_date, end_date, weekday_rides, weekend_rides, new_card)
     current_transaction.organize
@@ -24,7 +29,7 @@ class MetroController < ApplicationController
 
     content_type :json
     best_choice.to_json
-    
+
 
 
   end

@@ -50,14 +50,15 @@ $(function(){
   
 function submitData(){
   console.log("submit data");
-  // $newCard = $('input:checked')
+  $newCard = $('input:checked')
   choiceList = new ChoiceList()
+  choiceList.reset();
   choiceList.fetch({
     data: {start_date: $startDate.val(), 
            end_date: $endDate.val(), 
            weekday_rides: $weekdayRides.val(), 
-           weekend_rides: $weekendRides.val() 
-           // new_card: $newCard.val() 
+           weekend_rides: $weekendRides.val(),
+           new_card: $newCard.val() 
     },
     success: function(){
       choiceListView = new ChoiceListView({
