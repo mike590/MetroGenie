@@ -65,14 +65,12 @@ class NewYork
     end
 
     hybrid_cost = (30 * @completed_weeks) + @final_week_cost
-    binding.pry
 
     if @new_card
       money_on_card_cost += 1
       pure_weekly_unlimited_cost += 1
       hybrid_cost += 1
     end
-    binding.pry
     hybrid_cost = hybrid_cost + 0.01
     hybrid_cost = hybrid_cost.round(2)
     money_on_card_cost = money_on_card_cost + 0.01
