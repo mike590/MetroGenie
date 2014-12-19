@@ -96,6 +96,10 @@
   margin-top: 12%;
 }
 
+.choice {
+  color: white;
+}
+
 #choices-image-div {
   background-image: url(/images/mta_vintage_car.png); 
   background-image: cover; 

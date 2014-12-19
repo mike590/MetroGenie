@@ -62,7 +62,7 @@ function submitData(){
     success: function(){
       choiceListView = new ChoiceListView({
         collection: choiceList,
-        el: $('.choice-container')
+        el: $('#append-choices')
       })
       choiceListView.render();
     }    
