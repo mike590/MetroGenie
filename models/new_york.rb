@@ -56,16 +56,29 @@ class NewYork
 
   def generate_choices
     money_on_card_cost = (@weekly_cost * @completed_weeks) + @final_week_cost
+
+
     pure_weekly_unlimited_cost = 30 * @completed_weeks
+
     if @final_week_length != 0
       pure_weekly_unlimited_cost += 30
     end
+
     hybrid_cost = (30 * @completed_weeks) + @final_week_cost
+
+
     if @new_card
       money_on_card_cost += 1
       pure_weekly_unlimited_cost += 1
       hybrid_cost += 1
     end
+    hybrid_cost = hybrid_cost + 0.01
+    hybrid_cost = hybrid_cost.round(2)
+    money_on_card_cost = money_on_card_cost + 0.01
+    money_on_card_cost = money_on_card_cost.round(2)
+    @final_week_cost = @final_week_cost + 0.01
+    @final_week_cost = @final_week_cost.round(2)
+
     # If there is no final week, two best options are pure money on card VS. all weekly unlimiteds
     if @final_week_length == 0
       choices = [
@@ -77,7 +90,7 @@ class NewYork
         }, {
           type: "flexible",
           weekly: @completed_weeks,
-          value: 0,
+          value: 0.00,
           total_cost: pure_weekly_unlimited_cost
         }
       ]
@@ -109,7 +122,7 @@ class NewYork
           }, {
             type: "flexible",
             weekly: @completed_weeks + 1,
-            value: 0,
+            value: 0.00,
             total_cost: pure_weekly_unlimited_cost
           }
         ]
@@ -124,7 +137,7 @@ class NewYork
           }, {
             type: "flexible",
             weekly: @completed_weeks + 1,
-            value: 0,
+            value: 0.00,
             total_cost: pure_weekly_unlimited_cost
           }
         ]
