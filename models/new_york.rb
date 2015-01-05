@@ -38,8 +38,8 @@ class NewYork
   end
 
   def organize
-    final_week_length = @date_array.length % 7
-    final_week_length.times do
+    @final_week_length = @date_array.length % 7
+    @final_week_length.times do
       @final_week.push(@date_array.pop)
     end
     @final_week.reverse!
@@ -71,9 +71,14 @@ class NewYork
       pure_weekly_unlimited_cost += 1
       hybrid_cost += 1
     end
+
     hybrid_cost = hybrid_cost + 0.01
     hybrid_cost = hybrid_cost.round(2)
-    money_on_card_cost = money_on_card_cost + 0.01
+
+    if money_on_card_cost != 0
+      money_on_card_cost = money_on_card_cost + 0.01
+    end
+    
     money_on_card_cost = money_on_card_cost.round(2)
     @final_week_cost = @final_week_cost + 0.01
     @final_week_cost = @final_week_cost.round(2)
