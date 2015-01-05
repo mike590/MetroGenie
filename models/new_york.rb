@@ -65,11 +65,12 @@ class NewYork
     end
 
     hybrid_cost = (30 * @completed_weeks) + @final_week_cost
-
+    monthly_cost = 112
     if @new_card
       money_on_card_cost += 1
       pure_weekly_unlimited_cost += 1
       hybrid_cost += 1
+      monthly_cost +=1
     end
 
     hybrid_cost = hybrid_cost + 0.01
@@ -78,73 +79,159 @@ class NewYork
     if money_on_card_cost != 0
       money_on_card_cost = money_on_card_cost + 0.01
     end
-    
+
     money_on_card_cost = money_on_card_cost.round(2)
     @final_week_cost = @final_week_cost + 0.01
     @final_week_cost = @final_week_cost.round(2)
 
-    # If there is no final week, two best options are pure money on card VS. all weekly unlimiteds
-    if @final_week_length == 0
-      choices = [
-        {
-          type: "value",
-          weekly: 0,
-          value: money_on_card_cost,
-          total_cost: money_on_card_cost
-        }, {
-          type: "flexible",
-          weekly: @completed_weeks,
-          value: 0.00,
-          total_cost: pure_weekly_unlimited_cost
-        }
-      ]
-    else
 
-      # Two best options are pure money on card VS. weekly unlimiteds + money for final week
-      if money_on_card_cost < pure_weekly_unlimited_cost  && hybrid_cost < pure_weekly_unlimited_cost
+    # If a monthly card will not be needed...
+    if @completed_weeks < 3 || (@completed_weeks == 3 && @final_week_length == 0)
+      # If there is no final week, two best options are pure money on card VS. all weekly unlimiteds
+      if @final_week_length == 0
         choices = [
           {
             type: "value",
             weekly: 0,
+            monthly: 0,
             value: money_on_card_cost,
             total_cost: money_on_card_cost
           }, {
             type: "flexible",
             weekly: @completed_weeks,
-            value: @final_week_cost,
-            total_cost: hybrid_cost
-          }
-        ]
-        # Two best options are pure money on card VS. all weekly unlimiteds
-      elsif money_on_card_cost < hybrid_cost  && pure_weekly_unlimited_cost < hybrid_cost
-        choices = [
-          {
-            type: "value",
-            weekly: 0,
-            value: money_on_card_cost,
-            total_cost: money_on_card_cost
-          }, {
-            type: "flexible",
-            weekly: @completed_weeks + 1,
+            monthly: 0,
             value: 0.00,
             total_cost: pure_weekly_unlimited_cost
           }
         ]
-        # Two best options are all weekly unlimiteds VS. weekly unlimiteds + money for final week
       else
+
+        # Two best options are pure money on card VS. weekly unlimiteds + money for final week
+        if money_on_card_cost < pure_weekly_unlimited_cost  && hybrid_cost < pure_weekly_unlimited_cost
+          choices = [
+            {
+              type: "value",
+              weekly: 0,
+              monthly: 0,
+              value: money_on_card_cost,
+              total_cost: money_on_card_cost
+            }, {
+              type: "flexible",
+              weekly: @completed_weeks,
+              monthly: 0,
+              value: @final_week_cost,
+              total_cost: hybrid_cost
+            }
+          ]
+          # Two best options are pure money on card VS. all weekly unlimiteds
+        elsif money_on_card_cost < hybrid_cost  && pure_weekly_unlimited_cost < hybrid_cost
+          choices = [
+            {
+              type: "value",
+              weekly: 0,
+              monthly: 0,
+              value: money_on_card_cost,
+              total_cost: money_on_card_cost
+            }, {
+              type: "flexible",
+              weekly: @completed_weeks + 1,
+              monthly: 0,
+              value: 0.00,
+              total_cost: pure_weekly_unlimited_cost
+            }
+          ]
+          # Two best options are all weekly unlimiteds VS. weekly unlimiteds + money for final week
+        else
+          choices = [
+            {
+              type: "value",
+              weekly: @completed_weeks,
+              monthly: 0,
+              value: @final_week_cost,
+              total_cost: hybrid_cost
+            }, {
+              type: "flexible",
+              weekly: @completed_weeks + 1,
+              monthly: 0,
+              value: 0.00,
+              total_cost: pure_weekly_unlimited_cost
+            }
+          ]
+        end
+      end
+    # Considering monthly options
+    else
+      # Max calculation time allowed is exactly 28 days
+      if @completed_weeks == 4
         choices = [
           {
             type: "value",
-            weekly: @completed_weeks,
-            value: @final_week_cost,
-            total_cost: hybrid_cost
+            weekly: 0,
+            monthly: 0,
+            value: money_on_card_cost,
+            total_cost: money_on_card_cost
           }, {
             type: "flexible",
-            weekly: @completed_weeks + 1,
+            weekly: 0,
+            monthly: 1,
             value: 0.00,
-            total_cost: pure_weekly_unlimited_cost
+            total_cost: monthly_cost
           }
         ]
+      # Between three and four weeks
+      else
+        # Best options are pure money on card or monthly unlimited
+        if monthly_cost < hybrid_cost && money_on_card_cost < hybrid_cost
+          choices = [
+            {
+              type: "value",
+              weekly: 0,
+              monthly: 0,
+              value: money_on_card_cost,
+              total_cost: money_on_card_cost
+            }, {
+              type: "flexible",
+              weekly: 0,
+              monthly: 1,
+              value: 0.00,
+              total_cost: monthly_cost
+            }
+          ]
+        # Best options are pure money on card or hybrid
+        elsif money_on_card_cost < monthly_cost && hybrid_cost < monthly_cost
+          choices = [
+            {
+              type: "value",
+              weekly: 0,
+              monthly: 0,
+              value: money_on_card_cost,
+              total_cost: money_on_card_cost
+            }, {
+              type: "flexible",
+              weekly: @completed_weeks,
+              monthly: 0,
+              value: @final_week_cost,
+              total_cost: hybrid_cost
+            }
+          ]
+        # Best options are pure monthly or hybrid
+        else
+          choices = [
+            {
+              type: "value",
+              weekly: @completed_weeks,
+              monthly: 0,
+              value: @final_week_cost,
+              total_cost: hybrid_cost
+            }, {
+              type: "flexible",
+              weekly: 0,
+              monthly: 1,
+              value: 0.00,
+              total_cost: monthly_cost
+            }
+          ]
+        end
       end
     end
   end
