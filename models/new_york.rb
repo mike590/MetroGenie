@@ -120,7 +120,7 @@ class NewYork
             }, {
               type: "hybrid",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
