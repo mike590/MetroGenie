@@ -1,3 +1,5 @@
+
+
 .container-fluid {
   background-color: rgba(217, 219, 217, 1);
 }
@@ -101,67 +103,22 @@
   margin-top: 18%;
 }
 
-.choice {
-  color: white;
+#choices-template {
+  background-color: yellow;
 }
 
-#choices-row {
-  height: 50vh; 
-  margin: 0 0;
+#money-choice {
+  background-color: orange;
 }
 
-#choices-image-div {
-  background-image: url(/images/mta_vintage_car.png); 
-  background-image: cover; 
-  background-size: 100%; 
-  background-repeat: no-repeat;
-  background-color: rgba(0, 0, 0, 0.3);
+#weekly-choice {
+  background-color: blue;
 }
 
-#choice-div {
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
+#monthly-choice {
+  background-color: red;
 }
 
-.total-cost {
-  background-color: rgba(209, 2, 157, .4);
-}
-
-.card-slot {
-  height: 100%;
-  top: 35%;
-  text-align: center;
-  color: white;
-}
-
-.full-height {
-  height: 100%;
-}
-
-.fifteen-height {
-  height: 15%;
-}
-
-.center-text {
-  text-align: center;
-}
-
-.borders {
-  border: 2px solid white;
-}
-
-.top-border {
-  border-top: 2px solid white;
-}
-
-.bottom-border{
-  border-bottom: 1px solid white;
-}
-
-.left-border{
-  border-left: 1px solid white;
-}
-
-.right-border{
-  border-right: 1px solid white;
+#hybrid-choice {
+  background-color: red;
 }

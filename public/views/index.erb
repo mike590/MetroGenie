@@ -99,7 +99,7 @@
 </br>
 
 <!-- choices container will be populated by choices -->
-<div class="row" style='height: 40vh;'>
+<div class="row" style='height: 10vh;'>
   <div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
     <div class="row" id='choices-container' >
       
@@ -109,17 +109,17 @@
 
 <!-- four different templates for four different choice types -->
 <script type="template" id='money-choice-template'>
-  <div class="col-xs-6">
+  <div class="col-xs-6" id="money-choice">
     Type: <%%= type %>
     <br>
     Total Rides: <%%= rides %>
     <br>
-    Cost: <%% total_cost %>
+    Cost: <%%= total_cost %>
   </div>
 </script>
 
 <script type="template" id='weekly-choice-template'>
-  <div class="col-xs-6">
+  <div class="col-xs-6" id="weekly-choice">
     Type: <%%= type %>
     <br>
     Final Week Rides: <%%= final_week_rides %>
@@ -128,22 +128,22 @@
     <br>
     Weekly Unlimiteds: <%%= weekly %>
     <br>
-    Cost: <%% total_cost %>
+    Cost: <%%= total_cost %>
   </div>
 </script>
 
 <script type="template" id='monthly-choice-template'>
-  <div class="col-xs-6">
+  <div class="col-xs-6" id="monthly-choice">
     Type: <%%= type %>
     <br>
     Total Rides: <%%= rides %>
     <br>
-    Cost: <%% total_cost %>
+    Cost: <%%= total_cost %>
   </div>
 </script>
 
 <script type="template" id='hybrid-choice-template'>
-  <div class="col-xs-6">
+  <div class="col-xs-6" id="hybrid-choice">
     Type: <%%= type %>
     <br>
     Total Rides: <%%= rides %>
@@ -154,6 +154,6 @@
     <br>
     Value on card for final week: <%%= value %>
     <br>
-    Total Cost: <%% total_cost %>
+    Total Cost: <%%= total_cost %>
   </div>
 </script>
