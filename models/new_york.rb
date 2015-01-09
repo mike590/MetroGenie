@@ -103,7 +103,7 @@ class NewYork
           }, {
             type: "weekly",
             rides: total_rides,
-            final_week_rides: final_week_rides,
+            final_week_rides: @final_week_rides,
             weekly: @completed_weeks,
             total_cost: pure_weekly_unlimited_cost
           }
@@ -136,7 +136,7 @@ class NewYork
             }, {
               type: "weekly",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks + 1,
               total_cost: pure_weekly_unlimited_cost
             }
@@ -147,14 +147,14 @@ class NewYork
             {
               type: "hybrid",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }, {
               type: "weekly",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks + 1,
               total_cost: pure_weekly_unlimited_cost
             }
@@ -201,7 +201,7 @@ class NewYork
             }, {
               type: "hybrid",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
@@ -213,7 +213,7 @@ class NewYork
             {
               type: "hybrid",
               rides: total_rides,
-              final_week_rides: final_week_rides,
+              final_week_rides: @final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
