@@ -99,23 +99,59 @@
 </br>
 
 <div class="row" style='height: 40vh;'>
-  <div id='choices-container' class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
-    
+  <div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
+    <div class="row" id='choices-container' >
+      
+    </div>
   </div>
 </div>
 
 <script type="template" id='money-choice-template'>
-  
+  <div class="col-xs-6">
+    Type: <%%= type %>
+    <br>
+    Total Rides: <%%= rides %>
+    <br>
+    Cost: <<% total_cost %>
+  </div>
 </script>
 
 <script type="template" id='weekly-choice-template'>
-  
+  <div class="col-xs-6">
+    Type: <%%= type %>
+    <br>
+    Final Week Rides: <%%= final_week_rides %>
+    <br>
+    Total Rides: <%%= rides %>
+    <br>
+    Weekly Unlimiteds: <%%= weekly %>
+    <br>
+    Cost: <<% total_cost %>
+  </div>
 </script>
 
 <script type="template" id='monthly-choice-template'>
-  
+  <div class="col-xs-6">
+    Type: <%%= type %>
+    <br>
+    Total Rides: <%%= rides %>
+    <br>
+    Cost: <<% total_cost %>
+  </div>
 </script>
 
 <script type="template" id='hybrid-choice-template'>
-  
+  <div class="col-xs-6">
+    Type: <%%= type %>
+    <br>
+    Total Rides: <%%= rides %>
+    <br>
+    Final Week Rides: <%%= final_week_rides %>
+    <br>
+    Weekly Unlimiteds: <%%= weekly %>
+    <br>
+    Value on card for final week: <%%= value %>
+    <br>
+    Total Cost: <<% total_cost %>
+  </div>
 </script>
