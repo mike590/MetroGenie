@@ -91,16 +91,11 @@ class NewYork
       if @final_week_length == 0
         choices = [
           {
-            type: "value",
-            weekly: 0,
-            monthly: 0,
-            value: money_on_card_cost,
+            type: "money",
             total_cost: money_on_card_cost
           }, {
-            type: "flexible",
+            type: "weekly",
             weekly: @completed_weeks,
-            monthly: 0,
-            value: 0.00,
             total_cost: pure_weekly_unlimited_cost
           }
         ]
@@ -110,15 +105,11 @@ class NewYork
         if money_on_card_cost < pure_weekly_unlimited_cost  && hybrid_cost < pure_weekly_unlimited_cost
           choices = [
             {
-              type: "value",
-              weekly: 0,
-              monthly: 0,
-              value: money_on_card_cost,
+              type: "money",
               total_cost: money_on_card_cost
             }, {
-              type: "flexible",
+              type: "hybrid",
               weekly: @completed_weeks,
-              monthly: 0,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }
@@ -127,16 +118,11 @@ class NewYork
         elsif money_on_card_cost < hybrid_cost  && pure_weekly_unlimited_cost < hybrid_cost
           choices = [
             {
-              type: "value",
-              weekly: 0,
-              monthly: 0,
-              value: money_on_card_cost,
+              type: "money",
               total_cost: money_on_card_cost
             }, {
-              type: "flexible",
+              type: "weekly",
               weekly: @completed_weeks + 1,
-              monthly: 0,
-              value: 0.00,
               total_cost: pure_weekly_unlimited_cost
             }
           ]
@@ -144,16 +130,13 @@ class NewYork
         else
           choices = [
             {
-              type: "value",
+              type: "hybrid",
               weekly: @completed_weeks,
-              monthly: 0,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }, {
-              type: "flexible",
+              type: "weekly",
               weekly: @completed_weeks + 1,
-              monthly: 0,
-              value: 0.00,
               total_cost: pure_weekly_unlimited_cost
             }
           ]
@@ -165,16 +148,10 @@ class NewYork
       if @completed_weeks == 4
         choices = [
           {
-            type: "value",
-            weekly: 0,
-            monthly: 0,
-            value: money_on_card_cost,
+            type: "money",
             total_cost: money_on_card_cost
           }, {
-            type: "flexible",
-            weekly: 0,
-            monthly: 1,
-            value: 0.00,
+            type: "monthly",
             total_cost: monthly_cost
           }
         ]
@@ -184,16 +161,10 @@ class NewYork
         if monthly_cost < hybrid_cost && money_on_card_cost < hybrid_cost
           choices = [
             {
-              type: "value",
-              weekly: 0,
-              monthly: 0,
-              value: money_on_card_cost,
+              type: "money",
               total_cost: money_on_card_cost
             }, {
-              type: "flexible",
-              weekly: 0,
-              monthly: 1,
-              value: 0.00,
+              type: "monthly",
               total_cost: monthly_cost
             }
           ]
@@ -201,15 +172,11 @@ class NewYork
         elsif money_on_card_cost < monthly_cost && hybrid_cost < monthly_cost
           choices = [
             {
-              type: "value",
-              weekly: 0,
-              monthly: 0,
-              value: money_on_card_cost,
+              type: "money",
               total_cost: money_on_card_cost
             }, {
-              type: "flexible",
+              type: "hybrid",
               weekly: @completed_weeks,
-              monthly: 0,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }
@@ -218,16 +185,12 @@ class NewYork
         else
           choices = [
             {
-              type: "value",
+              type: "hybrid",
               weekly: @completed_weeks,
-              monthly: 0,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }, {
-              type: "flexible",
-              weekly: 0,
-              monthly: 1,
-              value: 0.00,
+              type: "monthly",
               total_cost: monthly_cost
             }
           ]
