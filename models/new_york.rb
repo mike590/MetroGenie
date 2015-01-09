@@ -7,7 +7,9 @@ class NewYork
     @end_date = end_date
     @weekday_rides = weekday_rides
     @weekend_rides = weekend_rides
+    @weekly_rides = 0
     @final_week = []
+    @final_week_rides = 0
     @completed_weeks
     @model_week = []
     @weekly_cost = 0
@@ -19,8 +21,10 @@ class NewYork
     @model_week.each do |day|
       if day == "Saturday" || day == "Sunday"
         @weekly_cost += @weekend_rides*2.5
+        @weekly_rides += @weekend_rides
       else
         @weekly_cost += @weekday_rides*2.5
+        @weekly_rides += @weekday_rides
       end
     end
     @weekly_cost = @weekly_cost/1.05
@@ -28,8 +32,10 @@ class NewYork
     @final_week.each do |day|
       if day == "Saturday" || day == "Sunday"
         @final_week_cost += @weekend_rides*2.5
+        @final_week_rides += @weekend_rides
       else
         @final_week_cost += @weekday_rides*2.5
+        @final_week_rides += @weekday_rides
       end
     end
 
