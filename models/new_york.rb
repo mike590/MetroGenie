@@ -89,7 +89,7 @@ class NewYork
     money_on_card_cost = money_on_card_cost.round(2)
     @final_week_cost = @final_week_cost + 0.01
     @final_week_cost = @final_week_cost.round(2)
-
+    total_rides = (@weekly_rides * @completed_weeks) + @final_week_rides
 
     # If a monthly card will not be needed...
     if @completed_weeks < 3 || (@completed_weeks == 3 && @final_week_length == 0)
@@ -98,9 +98,12 @@ class NewYork
         choices = [
           {
             type: "money",
+            rides: total_rides,
             total_cost: money_on_card_cost
           }, {
             type: "weekly",
+            rides: total_rides,
+            final_week_rides: final_week_rides,
             weekly: @completed_weeks,
             total_cost: pure_weekly_unlimited_cost
           }
@@ -112,9 +115,12 @@ class NewYork
           choices = [
             {
               type: "money",
+              rides: total_rides,
               total_cost: money_on_card_cost
             }, {
               type: "hybrid",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
@@ -125,9 +131,12 @@ class NewYork
           choices = [
             {
               type: "money",
+              rides: total_rides,
               total_cost: money_on_card_cost
             }, {
               type: "weekly",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks + 1,
               total_cost: pure_weekly_unlimited_cost
             }
@@ -137,11 +146,15 @@ class NewYork
           choices = [
             {
               type: "hybrid",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }, {
               type: "weekly",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks + 1,
               total_cost: pure_weekly_unlimited_cost
             }
@@ -155,9 +168,11 @@ class NewYork
         choices = [
           {
             type: "money",
+            rides: total_rides,
             total_cost: money_on_card_cost
           }, {
             type: "monthly",
+            rides: total_rides,
             total_cost: monthly_cost
           }
         ]
@@ -168,9 +183,11 @@ class NewYork
           choices = [
             {
               type: "money",
+              rides: total_rides,
               total_cost: money_on_card_cost
             }, {
               type: "monthly",
+              rides: total_rides,
               total_cost: monthly_cost
             }
           ]
@@ -179,9 +196,12 @@ class NewYork
           choices = [
             {
               type: "money",
+              rides: total_rides,
               total_cost: money_on_card_cost
             }, {
               type: "hybrid",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
@@ -192,11 +212,14 @@ class NewYork
           choices = [
             {
               type: "hybrid",
+              rides: total_rides,
+              final_week_rides: final_week_rides,
               weekly: @completed_weeks,
               value: @final_week_cost,
               total_cost: hybrid_cost
             }, {
               type: "monthly",
+              rides: total_rides,
               total_cost: monthly_cost
             }
           ]
