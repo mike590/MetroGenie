@@ -1,30 +1,30 @@
  <script>
-//   $(function(){
-//     var imageIndex = 0,
-//         imageArray = [
-//           "/images/seeingNY2.gif",
-//           "/images/subwaynewspaper2.gif",
-//           "/images/building2.jpg",
-//           "/images/times_square2.jpg",
-//           "/images/14subway2.gif",
-//           "/images/hidden_nyc_station.png",
-//           "/images/rockefeller2.gif"
-//         ];
-//     changeBackground = function changeBackground(){
-//       var index = imageIndex++ % imageArray.length;
-//       $('.slideshow').css({
-//         'background-image': "url('" + imageArray[index] + "')",
-//         'background-repeat' : 'no-repeat', 
-//         'background-size' : 'cover'
-//       })
-//     };
-//     // setInterval(changeBackground, 8000);
+  $(function(){
+    var imageIndex = 0,
+        imageArray = [
+          "/images/seeingNY2.gif",
+          "/images/subwaynewspaper2.gif",
+          "/images/building2.jpg",
+          "/images/times_square2.jpg",
+          "/images/14subway2.gif",
+          "/images/hidden_nyc_station.png",
+          "/images/rockefeller2.gif"
+        ];
+    changeBackground = function changeBackground(){
+      var index = imageIndex++ % imageArray.length;
+      $('.slideshow').css({
+        'background-image': "url('" + imageArray[index] + "')",
+        'background-repeat' : 'no-repeat', 
+        'background-size' : 'cover'
+      })
+    };
+    setInterval(changeBackground, 3000);
 
-//   })
+  })
       $(function(){
         $("#fullpage").fullpage()
       })
-// </script>
+  </script>
 
 <div id="fullpage">
   <div class="section slideshow">
