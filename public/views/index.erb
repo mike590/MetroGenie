@@ -1,29 +1,40 @@
-<script>
-  $(function(){
-    var imageIndex = 0,
-        imageArray = [
-          "/images/seeingNY2.gif",
-          "/images/subwaynewspaper2.gif",
-          "/images/building2.jpg",
-          "/images/times_square2.jpg",
-          "/images/14subway2.gif",
-          "/images/hidden_nyc_station.png",
-          "/images/rockefeller2.gif"
-        ];
-    changeBackground = function changeBackground(){
-      var index = imageIndex++ % imageArray.length;
-      $('.slideshow').css({
-        'background-image': "url('" + imageArray[index] + "')",
-        'background-repeat' : 'no-repeat', 
-        'background-size' : 'cover'
-      })
-    };
-    setInterval(changeBackground, 8000);
+// <script>
+//   $(function(){
+//     var imageIndex = 0,
+//         imageArray = [
+//           "/images/seeingNY2.gif",
+//           "/images/subwaynewspaper2.gif",
+//           "/images/building2.jpg",
+//           "/images/times_square2.jpg",
+//           "/images/14subway2.gif",
+//           "/images/hidden_nyc_station.png",
+//           "/images/rockefeller2.gif"
+//         ];
+//     changeBackground = function changeBackground(){
+//       var index = imageIndex++ % imageArray.length;
+//       $('.slideshow').css({
+//         'background-image': "url('" + imageArray[index] + "')",
+//         'background-repeat' : 'no-repeat', 
+//         'background-size' : 'cover'
+//       })
+//     };
+//     // setInterval(changeBackground, 8000);
 
-  })
+//   })
 
-</script>
+// </script>
 
+<div id="fullpage">
+  <div class="section" style='background-color: blue;'>
+    
+  </div>
+  <div class="section" style='backghround-color: red;'>
+    
+  </div>
+</div>
+
+
+<!-- 
 <div class='slideshow'>
   <div id='empty-div'>
   </div>
@@ -52,7 +63,7 @@
         <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
 
 
-        <p>First: <input id='start-date' type='date' name='start_date' autofocus/></p>
+       <!--  <p>First: <input id='start-date' type='date' name='start_date' autofocus/></p>
 
 
 
@@ -99,13 +110,12 @@
 </br>
 
 <!-- choices container will be populated by choices -->
-<div class="row" style='height: 10vh;'>
-  <div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
-    <div class="row" id='choices-container' >
+<!-- <div class="row" style='height: 10vh;'> -->
+  <!-- <div class="col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1"> -->
+    <!-- <div class="row" id='choices-container' > -->
       
-    </div>
-  </div>
-</div>
+    <!-- </div> -->
+  <!-- </div> -->
 
 <!-- four different templates for four different choice types -->
 <script type="template" id='money-choice-template'>
