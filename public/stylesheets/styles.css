@@ -2,11 +2,11 @@
 
 .container-fluid {
   background-color: rgba(217, 219, 217, 1);
+  padding: 0px;
 }
 
 .slideshow {
   transition: background-image 1s ease-in-out;
-  height: 90vh; 
   background-repeat: no-repeat; 
   background-image: url(/images/rockefeller2.gif); 
   background-size: cover;
