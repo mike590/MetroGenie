@@ -11,7 +11,6 @@ var choiceListView;
 var sectionPosition = "top"
 
 $(function(){
-  $('.results').hide();
   $startDate = $('#start-date')
   $endDate = $('#end-date')
   $weekdayRides = $('#weekday-rides')
@@ -55,6 +54,7 @@ function moveDown(){
     top: "0%"
   }, 500)
   $.fn.fullpage.moveSectionDown();
+  $('.results').show();
   sectionPosition = "bottom";
 }
 
