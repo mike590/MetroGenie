@@ -57,7 +57,6 @@ function moveDown(){
     $ .fn.fullpage.moveSectionDown();
   });
   sectionPosition = "bottom";
-  $.fn.fullpage.moveSectionDown();
 }
 
 function moveUp(){
