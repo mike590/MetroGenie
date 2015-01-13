@@ -51,7 +51,7 @@ $(function(){
 
 function moveDown(){
   $('.results').show(function(){
-    $ .fn.fullpage.moveSectionDown();
+    $.fn.fullpage.moveSectionDown();
   });
   sectionPosition = "bottom";
 }
