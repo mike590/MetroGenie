@@ -48,14 +48,14 @@ $(function(){
   });
 });
 
-function questionsToTop(){
+function moveUp(){
   $('.questions').animate({
     top: "0%"
   }, 500)
   $.fn.fullpage.moveSectionDown();
 }
 
-function questionsToBottom(){
+function moveDown(){
   $('.questions').animate({
     top: "80%"
   }, 500)
