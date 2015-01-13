@@ -48,13 +48,19 @@ $(function(){
   });
 });
 
-// $(document).scroll(function(){
-//     if($(this).scrollTop() > t)
-//     {   
-//         $('#voice2').css({"border-bottom":"2px solid #f4f5f8"});
-//         $('#voice3').css({"border-bottom":"2px solid #2e375b"});
-//     }
-// });
+function questionsToTop(){
+  $('.questions').animate({
+    top: "0%"
+  }, 500)
+  $.fn.fullpage.moveSectionDown();
+}
+
+function questionsToBottom(){
+  $('.questions').animate({
+    top: "80%"
+  }, 500)
+  $.fn.fullpage.moveSectionUp();
+}
 
 function submitData(){
   console.log("submit data");
