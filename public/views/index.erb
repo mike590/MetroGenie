@@ -19,16 +19,17 @@
       })
     };
     setInterval(changeBackground, 3000);
+    $("#fullpage").fullpage({
+      fixedElements: '.questions',
+      scrollingSpeed: 700,
+      resize: false
+    })
+    $('.results').hide();
 
   })
       $(function(){
-        $("#fullpage").fullpage({
-            fixedElements: '.questions',
-            scrollingSpeed: 700,
-            resize: false
-        })
+        
       })
-      $('.results').hide();
   </script>
     
 

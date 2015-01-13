@@ -53,8 +53,8 @@ function moveDown(){
   $('.questions').animate({
     top: "0%"
   }, 500)
-  $.fn.fullpage.moveSectionDown();
   $('.results').show();
+  $.fn.fullpage.moveSectionDown();
   sectionPosition = "bottom";
 }
 
@@ -63,6 +63,7 @@ function moveUp(){
     top: "80%"
   }, 500)
   $.fn.fullpage.moveSectionUp();
+  sectionPosition = "top";
 }
 
 function submitData(){
