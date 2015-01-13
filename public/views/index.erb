@@ -27,15 +27,18 @@
             }, 400)
           sectionPosition = "top";
         } else if(nextIndex === 2){
-          $('.questions').animate({
-            top: "0%"
-          }, 400)
+          if(sectionPosition === "bottom"){
+            $('.questions').animate({
+              top: "0%"
+            }, 400)
+          }
         }
       },
       fixedElements: '.questions',
       scrollingSpeed: 700,
       resize: false,
-      controlArrows: false
+      controlArrows: false, 
+      easing: 'swing'
     });
     $('.results').hide();
     $.fn.fullpage.setKeyboardScrolling(false);

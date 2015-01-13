@@ -12,7 +12,9 @@
   margin: 0px; 
   height: 20vh; 
   width: 100%; 
-  background-color: orange;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
   position: fixed;
 }
 
@@ -108,7 +110,7 @@
   border-radius: 5px;
   font-family: Helvetica;
   font-size: 18px;
-  margin-top: 18%;
+  margin-top: 12%;
 }
 
 #choices-template {
