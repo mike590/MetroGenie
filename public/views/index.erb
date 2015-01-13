@@ -1,3 +1,6 @@
+ <!-- MANINI!!!!! Can you read this? -->
+
+
  <script>
   $(function(){
     var imageIndex = 0,
@@ -24,19 +27,18 @@
         if(nextIndex === 1){
           $('.questions').animate({
             top: "80%"
-            }, 500)
+            }, 600)
           sectionPosition = "top";
         } else if(nextIndex === 2 && submitted === true){
           $('.questions').animate({
             top: "0%"
-          }, 500)
+          }, 600)
         }
       },
       fixedElements: '.questions',
       scrollingSpeed: 700,
       resize: false,
-      controlArrows: false,
-      easing: "swing"
+      controlArrows: false
     });
     $('.results').hide();
     $.fn.fullpage.setKeyboardScrolling(false);
