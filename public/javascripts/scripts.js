@@ -50,10 +50,10 @@ $(function(){
 });
 
 function moveDown(){
+  sectionPosition = "bottom";
   $('.results').show(function(){
     $.fn.fullpage.moveSectionDown();
   });
-  sectionPosition = "bottom";
 }
 
 function moveUp(){
