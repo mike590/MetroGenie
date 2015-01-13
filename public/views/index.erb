@@ -22,19 +22,30 @@
 
   })
       $(function(){
-        $("#fullpage").fullpage()
+        $("#fullpage").fullpage({
+            fixedElements: '.questions'
+        })
       })
   </script>
+    
 
+
+<a href='#top' style='position: fixed;'>Hallelujaj</a>
 <div id="fullpage">
   <div class="section slideshow">
     
+    <div class="row questions">
+      <div class="col-sm-12">
+        
+      </div>
+    </div>
+      
   </div>
-  <div class="section">
-    
+  <div class="section results">
+    <div class="slide">
+    </div>
   </div>
 </div>
-
 
 <!-- 
 <div class='slideshow'>
