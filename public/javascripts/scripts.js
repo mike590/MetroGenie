@@ -8,6 +8,7 @@ var $dateArray;
 var choices;
 var choiceList;
 var choiceListView;
+var sectionPosition = "top"
 
 $(function(){
   $startDate = $('#start-date')
@@ -53,6 +54,7 @@ function moveDown(){
     top: "0%"
   }, 500)
   $.fn.fullpage.moveSectionDown();
+  sectionPosition = "bottom";
 }
 
 function moveUp(){
@@ -63,6 +65,11 @@ function moveUp(){
 }
 
 function submitData(){
+  if(sectionPosition === "top"){
+    moveDown()
+  } else{
+    $.fn.fullpage.moveSlideRight();
+  }
   console.log("submit data");
   $newCard = $('input:checked')
   choiceList = new ChoiceList()
