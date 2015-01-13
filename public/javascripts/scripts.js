@@ -8,6 +8,7 @@ var $dateArray;
 var choices;
 var choiceList;
 var choiceListView;
+var sectionPosition = "top"
 
 $(function(){
   $('.results').hide();
@@ -49,14 +50,15 @@ $(function(){
   });
 });
 
-function moveUp(){
+function moveDown(){
   $('.questions').animate({
     top: "0%"
   }, 500)
   $.fn.fullpage.moveSectionDown();
+  sectionPosition = "bottom";
 }
 
-function moveDown(){
+function moveUp(){
   $('.questions').animate({
     top: "80%"
   }, 500)
@@ -64,6 +66,11 @@ function moveDown(){
 }
 
 function submitData(){
+  if(sectionPosition === "top"){
+    moveDown()
+  } else{
+    $.fn.fullpage.moveSlideRight();
+  }
   console.log("submit data");
   $newCard = $('input:checked')
   choiceList = new ChoiceList()
