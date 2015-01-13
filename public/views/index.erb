@@ -23,7 +23,8 @@
   })
       $(function(){
         $("#fullpage").fullpage({
-            fixedElements: '.questions'
+            fixedElements: '.questions',
+            scrollingSpeed: 700
         })
       })
   </script>
@@ -102,81 +103,6 @@
 
   </div>
 </div>
-
-<!-- 
-<div class='slideshow'>
-  <div id='empty-div'>
-  </div>
-
-  <div id='logo' class='row'>
-
-    <div id='logo-background' class='col-xs-4 col-xs-push-4'>
-      <h1>Metro<span> </span>Genie</h1>
-      <h3>Calculate your fare card now!</h3>
-    </div>
-  </div>
-  <div class='form-div' class='row'>    
-    <div id='form-div-1' class='col-xs-6 col-sm-3'>
-      <span class='question'>Need new card or refill existing?</span>
-      <br>
-      <p>
-        <input type="radio" name="new-card" value=true checked>New Card
-        </p>
-        <p>
-        <input type="radio" name="new-card" value=false>Refill Card 
-      </p>
-    </div>
-
-    <div id='form-div-2' class='col-xs-6 col-sm-3'>
-        <span class='question'>How long will you be using the metro?</span>
-        <!-- each button calls a separate function with nearly identical ajax requests that differ only in that the data hash will have different values (true vs false) for the parameter "has_card" -->
-
-
-       <!--  <p>First: <input id='start-date' type='date' name='start_date' autofocus/></p>
-
-
-
-        <p>Last: <input id='end-date' type='date' name='end_date' /></p>
-    </div>
-
-    <div id='form-div-3' class='col-xs-6 col-sm-3'>
-        <span class='question'>How many rides per day?</span>
-        <p>
-        Weekdays: <select id='weekday-rides' name='weekday_rides' >
-        <option value='Choose'>Choose</option>
-        <option value='0'>0</option>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-        <option value='6'>6</option>
-        <option value='7'>7</option>
-        <option value='8'>8</option>
-        <option value='9'>9</option>
-        </select></p>
-
-        <p>Weekends: <select id='weekend-rides' name='weekend_rides' >
-        <option value='Choose'>Choose</option>
-        <option value='0'>0</option>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-        <option value='6'>6</option>
-        <option value='7'>7</option>
-        <option value='8'>8</option>
-        <option value='9'>9</option>
-        </select></p>
-    </div>
-
-    <div id='form-div-4' class='col-xs-6 col-sm-3'>
-        <input id='submit' type='submit' />
-    </div>
-  </div>
-</div>
-</br>
 
 <!-- choices container will be populated by choices -->
 <!-- <div class="row" style='height: 10vh;'> -->
