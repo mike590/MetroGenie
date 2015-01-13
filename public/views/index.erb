@@ -24,18 +24,19 @@
         if(nextIndex === 1){
           $('.questions').animate({
             top: "80%"
-            }, 400)
+            }, 500)
           sectionPosition = "top";
         } else if(nextIndex === 2 && submitted === true){
           $('.questions').animate({
             top: "0%"
-          }, 400)
+          }, 500)
         }
       },
       fixedElements: '.questions',
       scrollingSpeed: 700,
       resize: false,
-      controlArrows: false
+      controlArrows: false,
+      easing: "swing"
     });
     $('.results').hide();
     $.fn.fullpage.setKeyboardScrolling(false);
