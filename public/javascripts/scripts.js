@@ -50,10 +50,12 @@ $(function(){
 });
 
 function moveDown(){
-  $('.results').show();
-  $('.questions').animate({
-    top: "0%"
-  }, 500)
+  $('.results').show(function(){
+    $('.questions').animate({
+      top: "0%"
+    }, 500)
+    $ .fn.fullpage.moveSectionDown();
+  });
   sectionPosition = "bottom";
   $.fn.fullpage.moveSectionDown();
 }
