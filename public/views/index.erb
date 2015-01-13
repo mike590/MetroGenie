@@ -24,9 +24,13 @@
         if(nextIndex === 1){
           $('.questions').animate({
             top: "80%"
-            }, 500)
+            }, 400)
           sectionPosition = "top";
-        } 
+        } else if(nextIndex === 2){
+          $('.questions').animate({
+            top: "0%"
+          }, 400)
+        }
       },
       fixedElements: '.questions',
       scrollingSpeed: 700,
