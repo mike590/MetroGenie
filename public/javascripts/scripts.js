@@ -9,6 +9,7 @@ var choices;
 var choiceList;
 var choiceListView;
 var sectionPosition = "top"
+var submitted = false
 
 $(function(){
   $startDate = $('#start-date')
@@ -50,21 +51,14 @@ $(function(){
 });
 
 function moveDown(){
-  sectionPosition = "bottom";
   $('.results').show(function(){
+    sectionPosition = "bottom";
     $.fn.fullpage.moveSectionDown();
   });
 }
 
-function moveUp(){
-  $('.questions').animate({
-    top: "80%"
-  }, 500)
-  $.fn.fullpage.moveSectionUp();
-  sectionPosition = "top";
-}
-
 function submitData(){
+  submitted = true;
   if(sectionPosition === "top"){
     moveDown()
   } else{
