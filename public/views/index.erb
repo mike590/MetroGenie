@@ -20,9 +20,18 @@
     };
     setInterval(changeBackground, 3000);
     $("#fullpage").fullpage({
+      onLeave: function(index, nextIndex, direction){
+        if(nextIndex === 1){
+          $('.questions').animate({
+            top: "80%"
+            }, 500)
+          sectionPosition = "top";
+        } 
+      },
       fixedElements: '.questions',
       scrollingSpeed: 700,
-      resize: false
+      resize: false,
+      controlArrows: false
     })
     $('.results').hide();
 
