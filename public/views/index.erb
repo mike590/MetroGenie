@@ -34,12 +34,63 @@
  <div id="fullpage">
 
   <div class="section slideshow">
+    <div id='logo' class='row'>
+      <div id='logo-background' class='col-xs-4 col-xs-push-4'>
+        <h1>Metro<span> </span>Genie</h1>
+        <h3>Calculate your fare card now!</h3>
+      </div>
+    </div>
     <div class="container-fluid">
       <div class='row questions'>
-        <div class="col-xs-3"></div>
-        <div class="col-xs-3"></div>
-        <div class="col-xs-3"></div>
-        <div class="col-xs-3"></div>
+        <div class="col-xs-3">
+          <span class='question'>Need new card or refill existing?</span>
+          <br>
+          <p>
+            <input type="radio" name="new-card" value=true checked>New Card
+          </p>
+          <p>
+            <input type="radio" name="new-card" value=false>Refill Card 
+          </p>
+        </div>
+        <div class="col-xs-3">
+          <span class='question'>How long will you be using the metro?</span>
+          <p>First: <input id='start-date' type='date' name='start_date' autofocus/></p>
+          <p>Last: <input id='end-date' type='date' name='end_date' /></p>
+        </div>
+        <div class="col-xs-3">
+          <span class='question'>How many rides per day?</span>
+          <p>
+          Weekdays: <select id='weekday-rides' name='weekday_rides' >
+          <option value='Choose'>Choose</option>
+          <option value='0'>0</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          </select></p>
+
+          <p>Weekends: <select id='weekend-rides' name='weekend_rides' >
+          <option value='Choose'>Choose</option>
+          <option value='0'>0</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          </select></p>
+        </div>
+        <div class="col-xs-3">
+          <input id='submit' type='submit' />
+        </div>
       </div>
     </div>
           
