@@ -8,10 +8,13 @@
 }
 
 .questions {
-  height: 20vh;
-  background-color: red;
+  top: 80%; 
+  margin: 0px; 
+  height: 20vh; 
+  width: 100%; 
+  background-color: orange;
+  position: fixed;
 }
-
 
 .full-height {
   height: 100%;
