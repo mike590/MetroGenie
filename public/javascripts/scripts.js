@@ -10,6 +10,7 @@ var choiceList;
 var choiceListView;
 
 $(function(){
+  $('.results').hide();
   $startDate = $('#start-date')
   $endDate = $('#end-date')
   $weekdayRides = $('#weekday-rides')
