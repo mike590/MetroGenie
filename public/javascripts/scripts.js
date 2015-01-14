@@ -8,7 +8,8 @@ var $dateArray;
 var choices;
 var choiceList;
 var choiceListView;
-var sectionPosition = "top"
+var sectionPosition = "top";
+var slidePosition = 0;
 
 $(function(){
   $startDate = $('#start-date')
@@ -44,7 +45,7 @@ $(function(){
     }
     // STRICTLY FOR TESTING PURPOSES. REMOVE AND REPLACE VERIFICATION>
     proceed = true;
-    
+
     if (proceed){
       submitData();
     }

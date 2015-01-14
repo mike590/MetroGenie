@@ -151,41 +151,21 @@
 </script>
 
 <script type="template" id='weekly-choice-template'>
-  <div class="col-xs-6" id="weekly-choice">
-    Type: <%%= type %>
-    <br>
-    Final Week Rides: <%%= final_week_rides %>
-    <br>
-    Total Rides: <%%= rides %>
-    <br>
-    Weekly Unlimiteds: <%%= weekly %>
-    <br>
-    Cost: <%%= total_cost %>
-  </div>
+  For $<%%= total_cost %>, you could buy <%%= weekly %> Weekly Unlimited Passes to cover all of your <%%= rides %> rides. This is a more flexible option, just in case you use more rides than you expected to. 
+  <br>
+  <h2>Weekly Unlimited Passes begin the first time you swipe them.</h2>
 </script>
 
 <script type="template" id='monthly-choice-template'>
-  <div class="col-xs-6" id="monthly-choice">
-    Type: <%%= type %>
-    <br>
-    Total Rides: <%%= rides %>
-    <br>
-    Cost: <%%= total_cost %>
-  </div>
+  For $<%%= total_cost %>, uou could buy a Monthly Unlimiteds Pass to cover your <%%= rides %> rides. This is a flexible option, just in case you use more rides than you expected to.
+  <br>
+  <h2>Monthly Unlimited Passes begin the first time you swipe them.</h2>
 </script>
 
 <script type="template" id='hybrid-choice-template'>
-  <div class="col-xs-6" id="hybrid-choice">
-    Type: <%%= type %>
-    <br>
-    Total Rides: <%%= rides %>
-    <br>
-    Final Week Rides: <%%= final_week_rides %>
-    <br>
-    Weekly Unlimiteds: <%%= weekly %>
-    <br>
-    Value on card for final week: <%%= value %>
-    <br>
-    Total Cost: <%%= total_cost %>
-  </div>
+  For $<%%= total_cost %>, you could use a combination of Weekly Unlimited Passes and cash.
+  <ul>
+    <li>Buy <%%= weekly %> Weekly Unlimited Passes</li>
+    <li>Put $<%%= value %> on your card to cover the <%%= final_week_rides %> rides for your final week</li>
+  </ul>
 </script>
