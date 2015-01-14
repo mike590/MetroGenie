@@ -1,4 +1,5 @@
 .choices-row {
+  margin-top: -20%;
   height: 55vh;
 }
 
@@ -36,6 +37,14 @@
   color: white;
   text-align: center;
   position: fixed;
+}
+
+.first-slide {
+  background-color: orange;
+}
+
+.second-slide {
+  background-color: red;
 }
 
 .full-height {

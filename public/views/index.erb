@@ -111,11 +111,11 @@
   </div>
   <div class="section results">
 
-    <div class="slide" style='background-color: blue;'>
+    <div class="first-slide slide">
 
       <div class="container choices-row">
         <div class="row full-height">
-          <div class="col-xs-8 col-xs-push-2 full-height">
+          <div class="col-xs-12 full-height">
             <div class="row">
               <div class="col-xs-6 choice-title"><h1>Option 1</h1></div>
               <div class="col-xs-6 choice-title"><h1>Option 2</h1></div>
@@ -127,11 +127,11 @@
       </div>
 
     </div>
-    <div class="slide" style='background-color: red;'>
+    <div class="second-slide slide">
         
       <div class="container choices-row">
       <div class="row full-height">
-        <div class="col-xs-8 col-xs-push-2 full-height">
+        <div class="col-xs-12 full-height">
           <div class="row">
             <div class="col-xs-6 choice-title"><h1>Option 1</h1></div>
             <div class="col-xs-6 choice-title"><h1>Option 2</h1></div>
@@ -153,13 +153,13 @@
 <!-- four different templates for four different choice types -->
 <script type="template" id='money-choice-template'>
   <div class="col-xs-6 full-height choice">
-    You could buy the exact amount of swipes you need, enough for <%%= rides %> rides, by putting $<%%= total_cost %> on your card.
+    <h2>You could buy the exact amount of swipes you need, enough for <%%= rides %> rides, by putting $<%%= total_cost %> on your card.</h2>
   </div>
 </script>
 
 <script type="template" id='weekly-choice-template'>
 <div class="col-xs-6 full-height choice">
-  For $<%%= total_cost %>, you could buy <%%= weekly %> Weekly Unlimited Passes to cover all of your <%%= rides %> rides. This is a more flexible option, just in case you use more rides than you expected to. 
+  <h2>For $<%%= total_cost %>, you could buy <%%= weekly %> Weekly Unlimited Passes to cover all of your <%%= rides %> rides. This is a more flexible option, just in case you use more rides than you expected to. </h2>
   <br>
   <h2>Weekly Unlimited Passes begin the first time you swipe them.</h2>
 </div>
@@ -167,18 +167,19 @@
 
 <script type="template" id='monthly-choice-template'>
   <div class="col-xs-6 full-height choice">
-  For $<%%= total_cost %>, uou could buy a Monthly Unlimiteds Pass to cover your <%%= rides %> rides. This is a flexible option, just in case you use more rides than you expected to.
-  <br>
+  <h2>For $<%%= total_cost %>, uou could buy a Monthly Unlimiteds Pass to cover your <%%= rides %> rides. This is a flexible option, just in case you use more rides than you expected to.
+  <br></h2>
   <h2>Monthly Unlimited Passes begin the first time you swipe them.</h2>
   </div>
 </script>
 
 <script type="template" id='hybrid-choice-template'>
   <div class="col-xs-6 full-height choice">
-  For $<%%= total_cost %>, you could use a combination of Weekly Unlimited Passes and cash.
+  <h1>For $<%%= total_cost %>, you could use a combination of Weekly Unlimited Passes and cash.</h1>
   <ul>
-    <li>Buy <%%= weekly %> Weekly Unlimited Passes</li>
-    <li>Put $<%%= value %> on your card to cover the <%%= final_week_rides %> rides for your final week</li>
+    <li><h2>Buy <%%= weekly %> Weekly Unlimited Passes</h2></li>
+    <li><h2>Put $<%%= value %> on your card to cover the <%%= final_week_rides %> rides for your final week</h2></li>
+    <li><h2>Weekly Unlimited Passes begin the first time you swipe them</h2></li>
   </ul>
   </div>
 </script>
