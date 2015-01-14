@@ -39,9 +39,7 @@ $(function(){
       // generate error
       proceed = false
     }
-    // STRICTLY FOR TESTING PURPOSES. REMOVE AND REPLACE VERIFICATION>
-    proceed = true;
-
+    
     if (proceed){
       submitData();
     }
