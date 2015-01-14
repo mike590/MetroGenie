@@ -73,11 +73,19 @@ function submitData(){
            new_card: $newCard.val() 
     },
     success: function(){
-      choiceListView = new ChoiceListView({
-        collection: choiceList,
-        el: $('#choices-container')
-      })
-      choiceListView.render();
+      if (slidePosition === 0){
+        choiceListView = new ChoiceListView({
+          collection: choiceList,
+          el: $('.left-choices')
+        })
+        choiceListView.render();
+      } else{
+        choiceListView = new ChoiceListView({
+          collection: choiceList,
+          el: $('.right-choices')
+        })
+        choiceListView.render();
+      }
     }    
   })
 }
