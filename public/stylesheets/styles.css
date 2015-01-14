@@ -48,6 +48,8 @@
 
 .choice-title {
   height: 20%;
+  background-color: gray;
+  text-align: center;
 }
 
 #logo {
