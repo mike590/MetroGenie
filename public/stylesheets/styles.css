@@ -42,6 +42,14 @@
   height: 100%;
 }
 
+.four-fifths-height {
+  height: 80%;
+}
+
+.choice-title {
+  height: 20%;
+}
+
 #logo {
   font-family: Helvetica;
   text-align: center;
