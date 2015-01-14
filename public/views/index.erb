@@ -28,6 +28,13 @@
           sectionPosition = "bottom";
         }
       },
+      onSlideLeave: function( anchorLink, index, slideIndex, direction){
+        if(slideIndex === 0){
+          slidePosition = 1;
+        } else{
+          slidePosition = 0;
+        }
+      },
       fixedElements: '.questions',
       scrollingSpeed: 700,
       resize: false,
