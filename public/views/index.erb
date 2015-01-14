@@ -21,18 +21,11 @@
         'background-size' : 'cover'
       })
     };
-    setInterval(changeBackground, 3000);
+    setInterval(changeBackground, 8000);
     $("#fullpage").fullpage({
       onLeave: function(index, nextIndex, direction){
         if(nextIndex === 1){
-          $('.questions').animate({
-            top: "80%"
-            }, 600)
           sectionPosition = "top";
-        } else if(nextIndex === 2 && submitted === true){
-          $('.questions').animate({
-            top: "0%"
-          }, 600)
         }
       },
       fixedElements: '.questions',
