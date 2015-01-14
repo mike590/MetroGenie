@@ -1,3 +1,23 @@
+.choices-row {
+  height: 55vh;
+}
+
+.left-choice-one {
+  background-color: green;
+}
+
+.left-choice-two {
+  background-color: white;
+}
+
+.right-choice-one {
+  background-color: orange;
+}
+
+.right-choice-two {
+  background-color: yellow;
+}
+
 .slideshow {
   transition: background-image 1s ease-in-out;
   -webkit-backface-visibility: hidden;

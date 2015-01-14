@@ -42,7 +42,9 @@ $(function(){
       proceed = false
       console.log("This error is for weekend rides value")
     }
-
+    // STRICTLY FOR TESTING PURPOSES. REMOVE AND REPLACE VERIFICATION>
+    proceed = true;
+    
     if (proceed){
       submitData();
     }
