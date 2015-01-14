@@ -23,25 +23,21 @@ $(function(){
     if ($startDate.val() === ""){
       // generate error
       proceed = false
-      console.log("This error is for start date value")
     }
 
     if ($endDate.val() === ""){
       // generate error
       proceed = false
-      console.log("This error is for end date value")
     }
 
     if ($weekdayRides.val() === "Choose"){
       // generate error
       proceed = false
-      console.log("This error is for weekday rides value")
     }
 
     if ($weekendRides.val() === "Choose"){
       // generate error
       proceed = false
-      console.log("This error is for weekend rides value")
     }
     // STRICTLY FOR TESTING PURPOSES. REMOVE AND REPLACE VERIFICATION>
     proceed = true;
