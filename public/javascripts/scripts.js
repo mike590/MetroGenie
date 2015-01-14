@@ -9,7 +9,6 @@ var choices;
 var choiceList;
 var choiceListView;
 var sectionPosition = "top"
-var submitted = false
 
 $(function(){
   $startDate = $('#start-date')
@@ -58,7 +57,6 @@ function moveDown(){
 }
 
 function submitData(){
-  submitted = true;
   if(sectionPosition === "top"){
     moveDown()
   } else{

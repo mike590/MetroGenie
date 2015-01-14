@@ -1,5 +1,3 @@
- <!-- MANINI!!!!! Can you read this? -->
-
 
  <script>
   $(function(){
@@ -26,6 +24,8 @@
       onLeave: function(index, nextIndex, direction){
         if(nextIndex === 1){
           sectionPosition = "top";
+        } else if(nextIndex === 2 && sectionPosition === "top"){
+          sectionPosition = "bottom";
         }
       },
       fixedElements: '.questions',
