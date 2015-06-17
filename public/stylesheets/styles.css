@@ -171,3 +171,7 @@
 #hybrid-choice {
   background-color: red;
 }
+
+#weekday-rides, #weekend-rides {
+  color: black;
+}

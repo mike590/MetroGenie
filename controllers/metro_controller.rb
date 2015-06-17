@@ -5,12 +5,14 @@ class MetroController < ApplicationController
   end
 
   get '/calculate' do
-    date_array = (Date.parse(params[:start_date]) .. Date.parse(params[:end_date])).map do |date|
+    start_date_arr = params[:start_date].split("/")
+    start_date = start_date_arr[2] + "-" + start_date_arr[0] + "-" + start_date_arr[1]
+    end_date_arr = params[:end_date].split("/")
+    end_date = end_date_arr[2] + "-" + end_date_arr[0] + "-" + end_date_arr[1]
+    date_array = (Date.parse(start_date) .. Date.parse(end_date)).map do |date|
       date.dayname
     end
 
-    start_date = Date.parse(params[:start_date])
-    end_date = Date.parse(params[:end_date])
     weekday_rides = params[:weekday_rides].to_i
     weekend_rides = params[:weekend_rides].to_i
     new_card = params[:new_card]
