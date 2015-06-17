@@ -20,26 +20,26 @@ class NewYork
   def calculate
     @model_week.each do |day|
       if day == "Saturday" || day == "Sunday"
-        @weekly_cost += @weekend_rides*2.5
+        @weekly_cost += @weekend_rides*2.75
         @weekly_rides += @weekend_rides
       else
-        @weekly_cost += @weekday_rides*2.5
+        @weekly_cost += @weekday_rides*2.75
         @weekly_rides += @weekday_rides
       end
     end
-    @weekly_cost = @weekly_cost/1.05
+    @weekly_cost = @weekly_cost/1.11
 
     @final_week.each do |day|
       if day == "Saturday" || day == "Sunday"
-        @final_week_cost += @weekend_rides*2.5
+        @final_week_cost += @weekend_rides*2.75
         @final_week_rides += @weekend_rides
       else
-        @final_week_cost += @weekday_rides*2.5
+        @final_week_cost += @weekday_rides*2.75
         @final_week_rides += @weekday_rides
       end
     end
 
-    @final_week_cost = @final_week_cost/1.05
+    @final_week_cost = @final_week_cost/1.11
 
   end
 
@@ -64,14 +64,14 @@ class NewYork
     money_on_card_cost = (@weekly_cost * @completed_weeks) + @final_week_cost
 
 
-    pure_weekly_unlimited_cost = 30 * @completed_weeks
+    pure_weekly_unlimited_cost = 31 * @completed_weeks
 
     if @final_week_length != 0
-      pure_weekly_unlimited_cost += 30
+      pure_weekly_unlimited_cost += 31
     end
 
-    hybrid_cost = (30 * @completed_weeks) + @final_week_cost
-    monthly_cost = 112
+    hybrid_cost = (31 * @completed_weeks) + @final_week_cost
+    monthly_cost = 116.5
     if @new_card
       money_on_card_cost += 1
       pure_weekly_unlimited_cost += 1
