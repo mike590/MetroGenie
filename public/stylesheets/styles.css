@@ -172,6 +172,10 @@
   background-color: red;
 }
 
-#weekday-rides, #weekend-rides {
+#weekday-rides {
+  color: black;
+} 
+
+#weekend-rides {
   color: black;
 }
