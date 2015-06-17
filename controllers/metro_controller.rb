@@ -5,10 +5,8 @@ class MetroController < ApplicationController
   end
 
   get '/calculate' do
-    start_date_arr = params[:start_date].split("/")
-    start_date = start_date_arr[2] + "-" + start_date_arr[0] + "-" + start_date_arr[1]
-    end_date_arr = params[:end_date].split("/")
-    end_date = end_date_arr[2] + "-" + end_date_arr[0] + "-" + end_date_arr[1]
+    start_date = params[:start_date]
+    end_date = params[:end_date]
     date_array = (Date.parse(start_date) .. Date.parse(end_date)).map do |date|
       date.dayname
     end

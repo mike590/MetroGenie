@@ -12,6 +12,11 @@ var sectionPosition = "top";
 var slidePosition = 0;
 
 $(function(){
+  document.addEventListener("keydown", function(e){
+    if(e.keyCode === 13){
+      checkInputs();
+    }
+  });
   $startDate = $('#start-date')
   $endDate = $('#end-date')
   $weekdayRides = $('#weekday-rides')
@@ -19,32 +24,51 @@ $(function(){
   $submit = $('#submit')
   $('#submit').click(function(e) {
     e.preventDefault();
-    var proceed = true
-    if ($startDate.val() === ""){
-      // generate error
-      proceed = false
-    }
-
-    if ($endDate.val() === ""){
-      // generate error
-      proceed = false
-    }
-
-    if ($weekdayRides.val() === "Choose"){
-      // generate error
-      proceed = false
-    }
-
-    if ($weekendRides.val() === "Choose"){
-      // generate error
-      proceed = false
-    }
-    
-    if (proceed){
-      submitData();
-    }
+    checkInputs();
   });
 });
+
+function checkInputs(){
+  var proceed = true
+  if ($startDate.val() === ""){
+    // generate error
+    proceed = false
+  }
+
+  if ($endDate.val() === ""){
+    // generate error
+    proceed = false
+  }
+
+  if ($weekdayRides.val() === "Choose"){
+    // generate error
+    proceed = false
+  }
+
+  if ($weekendRides.val() === "Choose"){
+    // generate error
+    proceed = false
+  }
+  // error checking if typed in wrong
+  if($startDate.val().indexOf("-") === -1){
+    var dateArr = $startDate.val().split("/");
+    if(dateArr[0].length !== 4 ||dateArr[1].length !== 2 || dateArr[2].length !== 2 ){
+      // generate error
+      proceed = false
+      alert("Please put your dates in the format of year-month-date. e.g. 2015-12-31");
+    }
+    var dateArr = $endDate.val().split("/");
+    if(dateArr[0].length !== 4 ||dateArr[1].length !== 2 || dateArr[2].length !== 2 ){
+      // generate error
+      proceed = false
+      alert("Please put your dates in the format of year-month-date. e.g. 2015-12-31");
+    }
+  }
+
+  if(proceed){
+    submitData();
+  }
+}
 
 function moveDown(){
   $('.results').show(function(){
